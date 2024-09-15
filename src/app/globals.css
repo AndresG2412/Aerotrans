@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background: #171717;
+}
+
+.link {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: black; /* Cambia el color del borde según prefieras */
+  bottom: -2px; /* Ajusta la posición del borde */
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.link:hover::after, .link:focus::after {
+  width: 100%; /* Muestra el borde completo al hacer hover o focus */
+}
+
+.link:hover, .link:focus {
+  outline: none;
+  /* Puedes cambiar el color del texto si lo deseas al hacer hover */
+}
