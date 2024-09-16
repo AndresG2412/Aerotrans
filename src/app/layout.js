@@ -10,8 +10,12 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                <div className="flex justify-center mt-5"><Navbar/></div>
-                {children}
+                <div className="flex flex-col">
+                    {/* <div className="flex justify-center mt-5 w-full"><Navbar/></div> */}
+                    <div>
+                        {children}
+                    </div>
+                </div>
             </body>
         </html>
     );
