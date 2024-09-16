@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Navbar(){
     return(
         <>
-            <div className="z-50 fixed w-[90%] h-[70px] bg-[#D9D9D9] rounded-3xl flex justify-between items-center">
+            <div className="border-[2px] border-black z-50 fixed w-[90%] h-[70px] bg-[#D9D9D9] rounded-3xl flex justify-between items-center">
                 <Link href="/">
                     <Image className="h-10 w-80 ml-6" src={logo} alt="Logo"/>
                 </Link>
