@@ -19,15 +19,16 @@ export default function Navbar2() {
                     <div className="flex items-center justify-between h-16">
                         <div className="flex items-center">
                             <div className="flex-shrink-0">
-                                <Link href="/" className="font-bold text-2xl"><Image className="h-10 w-52" src={logo} alt="Logo"/></Link>
+                                <Link href="/" className="font-bold text-2xl"><Image priority={false} className="h-10 w-52" src={logo} alt="Logo"/></Link>
                             </div>
                         </div>
                         <div className="hidden md:block">
                             <div className="ml-4 flex items-center space-x-6">
-                                <Link href="/" className="font-bold text-xl hover:text-red-600 transition-colors duration-400">PEDIR TAXI</Link>
-                                <Link href="/" className="font-bold text-xl hover:text-red-600 transition-colors duration-400">POLITICAS</Link>
-                                <Link href="/" className="font-bold text-xl hover:text-red-600 transition-colors duration-400">NOSOTROS</Link>
-                                <Link href="/" className="font-bold text-xl hover:text-red-600 transition-colors duration-400">SERVICIOS</Link>
+                            <Link href="../Pages/Pedido" className="text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">PEDIR TAXI</Link>
+                            <Link href="../Pages/Politicas" className="text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">POLITICAS</Link>
+                            <Link href="../Pages/Nosotros" className="text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">NOSOTROS</Link>
+                            <Link href="../Pages/Contacto" className="text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">CONTACTO</Link>
+                            <Link href="../Pages/Servicios" className="text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">SERVICIOS</Link>
                             </div>
                         </div>
                         <div className="md:hidden flex items-center">
@@ -48,10 +49,11 @@ export default function Navbar2() {
                 {isClick && (
                     <div className="md:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-4 sm:px-3 ">
-                            <Link href="/" className="block text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">PEDIR TAXI</Link>
-                            <Link href="/" className="block text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">POLITICAS</Link>
-                            <Link href="/" className="block text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">NOSOTROS</Link>
-                            <Link href="/" className="block text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">SERVICIOS</Link>
+                            <Link href="../Pages/Pedido" className="block text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">PEDIR TAXI</Link>
+                            <Link href="../Pages/Politicas" className="block text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">POLITICAS</Link>
+                            <Link href="../Pages/Nosotros" className="block text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">NOSOTROS</Link>
+                            <Link href="../Pages/Contacto" className="block text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">CONTACTO</Link>
+                            <Link href="../Pages/Servicios" className="block text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">SERVICIOS</Link>
                         </div>
                     </div>
                 )}

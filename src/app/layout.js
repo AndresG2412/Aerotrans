@@ -1,5 +1,5 @@
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Navbar2 from "@/app/components/Navbar";
 
 export const metadata = {
     title: "AeroTrans LTDA",
@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body>
                 <div className="flex flex-col">
-                    {/* <div className="flex justify-center mt-5 w-full"><Navbar/></div> */}
+                    <Navbar2/>
                     <div>
                         {children}
                     </div>
