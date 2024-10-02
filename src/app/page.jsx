@@ -1,5 +1,5 @@
 import Image from "next/image";
-import img1 from "../app/images/imgpitalito.png";
+import img1 from "../app/Images/imgpitalito.png";
 import servicios from "../app/Images/Serv-disponibles.png";
 import Button from "./components/Botton";
 
