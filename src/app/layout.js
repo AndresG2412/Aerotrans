@@ -1,6 +1,6 @@
 import "./globals.css";
-import Navbar2 from "../app/components/Navbar";
-import Footer from "../app/Components/Footer"
+import Navbar2 from "../app/components/Navbar.jsx";
+import Footer from "../app/Components/Footer.jsx"
 
 export const metadata = {
     title: "AeroTrans LTDA",
