@@ -1,7 +1,6 @@
 import Image from "next/image";
 import img1 from "../app/Images/imgpitalito.png";
 import servicios from "../app/Images/Serv-disponibles.png";
-import Button from "./components/Botton";
 
 export default function Home() {
 	return (
@@ -20,14 +19,6 @@ export default function Home() {
                     <Image src={servicios} alt="servicios" className="ml-10"/>
                 </div>
             </div>
-
-            {/* <div className="w-full text-center my-36">
-                <div>
-                    <Button titulo={"TAXIS"}/>
-                    <Button titulo={"BUSES"}/>
-                    <Button titulo={"CAMIONETAS"}/>
-                </div>
-            </div> */}
 		</>
 	);
 }
