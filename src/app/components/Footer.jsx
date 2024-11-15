@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="w-screen h-auto bg-gray-800 flex mt-20">
                 <div className="w-10/12 mx-auto flex justify-between items-center py-8">
 
-                    <Image src={img1} alt="logo_footer" className="w-96" />
+                    <Image priority={false} src={img1} alt="logo_footer" className="w-96" />
 
                     <div className="flex items-center">
                         <Image src={fb} alt="icon_fb" className="w-[75px] h-[75px] ml-12" />
