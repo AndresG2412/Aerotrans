@@ -1,4 +1,5 @@
 import "./globals.css";
+import Navbar2 from "../app/Components/Navbar";
 import Footer from "../app/Components/Footer";
 
 export const metadata = {
@@ -10,6 +11,7 @@ export default function RootLayout({ children }) {
         <html lang="es">
             <body>
                 <div className="flex flex-col">
+                    <Navbar2/>
                     <div>
                         {children}
                     </div>
