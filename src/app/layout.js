@@ -1,9 +1,9 @@
 import "./globals.css";
-import Navbar2 from "../app/components/Navbar.jsx";
-import Footer from "../app/Components/Footer.jsx"
+import Navbar2 from "../app/components/Navbar";
+import Footer from "../app/Components/Footer";
 
 export const metadata = {
-    title: "AeroTrans LTDA",
+    title: "AeroTrans LTDA"
 };
 
 export default function RootLayout({ children }) {
