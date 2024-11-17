@@ -9,6 +9,13 @@ const Navbar2 = dynamic(
     }
 )
 
+const Footer = dynamic(
+    () => import("@/app/Components/Footer"),
+    {
+        ssr: false,
+    }
+)
+
 export const metadata = {
     title: "AeroTrans LTDA"
 };
@@ -22,6 +29,7 @@ export default function RootLayout({ children }) {
                     <div>
                         {children}
                     </div>
+                    <Footer/>
                 </div>
             </body>
         </html>
