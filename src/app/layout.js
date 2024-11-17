@@ -1,5 +1,13 @@
 import "./globals.css";
-import Navbar2 from "../app/Components/Navbar";
+// import Navbar2 from "@/app/Components/Navbar";
+
+import dynamic from "next/dynamic";
+const Navbar2 = dynamic(
+    () => import("@/app/Components/Navbar"),
+    {
+        ssr: false,
+    }
+)
 
 export const metadata = {
     title: "AeroTrans LTDA"
