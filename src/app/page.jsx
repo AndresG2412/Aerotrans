@@ -6,7 +6,6 @@ export default function Home() {
 	return (
 		<>
 			<h1 className="font-semibold text-2xl text-center mt-36">La calidad total a su servicio</h1>
-            <h1 style={{ fontFamily: "'Inknut Antiqua', serif" }} className="font-bold text-8xl text-center mt-6">AEROTRANS</h1>
 
             <div className="relative w-full mt-24">
                 <Image src={img1} alt="Rectangulo_1" className="w-full" />
