@@ -1,5 +1,5 @@
 import "./globals.css";
-import Navbar2 from "../app/Components/Navbar";
+import Navbar2 from "@/app/Components/Navbar";
 
 export const metadata = {
     title: "AeroTrans LTDA"
