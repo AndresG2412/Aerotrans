@@ -1,10 +1,12 @@
 export default function Bento() {
     return (
-        <div className="mt-40 grid grid-cols-4 gap-4 bg-gray-100 p-4 rounded-lg shadow-lg max-w-6xl mx-auto">
-            <div class="col-span-1 bg-red-500 rounded text-center">01</div>
-            <div class="col-span-1 bg-blue-500 rounded text-center">02</div>
-            <div class="col-span-1 bg-purple-500 rounded text-center">03</div>
-            <div class="col-span-1 bg-green-500 rounded text-center">04</div>
+        <div className="grid grid-cols-5 grid-rows-5 gap-4 mt-36">
+            <div className="col-start-1 col-end-2 row-start-1 row-end-3 bg-blue-500 rounded-xl">Hola</div>
+            <div className="col-start-1 col-end-2 row-start-3 row-end-5 bg-green-500 rounded-xl">Hola</div>
+            <div className="col-start-2 col-end-4 row-start-1 row-end-2 bg-red-500 rounded-xl">Hola</div>
+            <div className="col-start-4 col-end-5 row-start-1 row-end-5 bg-yellow-500 rounded-xl">Hola</div>
+            <div className="col-start-2 col-end-4 row-start-4 row-end-5 bg-purple-500 rounded-xl">Hola</div>
+            <div className="col-start-2 col-end-4 row-start-2 row-end-4 bg-pink-500 rounded-xl">Hola</div>
         </div>
     );
-}
+  };

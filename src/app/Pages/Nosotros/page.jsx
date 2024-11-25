@@ -1,7 +1,9 @@
+import Bento from "@/app/Components/Bento";
 
 export default function Nosotros() {
     return(
         <>  
+            <Bento/>
             <div className="max-w-7xl mx-auto mt-36">
                 <div className="flex items-center mb-4">
                     <hr className="flex-grow border-[3px] border-black"/>
