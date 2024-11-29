@@ -4,7 +4,7 @@ export default function Nosotros() {
     return(
         <>  
             <Bento/>
-            <div className="max-w-7xl mx-auto mt-36">
+            <div className="max-w-7xl mx-auto mt-12">
                 <div className="flex items-center mb-4">
                     <hr className="flex-grow border-[3px] border-black"/>
                     <p className="text-4xl font-bold tracking-wide mx-4">MISION</p>
