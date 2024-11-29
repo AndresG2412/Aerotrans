@@ -1,5 +1,5 @@
 import "./globals.css";
-// import Navbar2 from "@/app/Components/Navbar";
+import Template from "@/template";
 
 import dynamic from "next/dynamic";
 const Navbar2 = dynamic(
@@ -26,9 +26,9 @@ export default function RootLayout({ children }) {
             <body>
                 <div className="flex flex-col">
                     <Navbar2/>
-                    <div>
-                        {children}
-                    </div>
+                        <Template>
+                            {children}
+                        </Template>
                     <Footer/>
                 </div>
             </body>

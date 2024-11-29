@@ -7,6 +7,7 @@ export default function Button({titulo, color, image}) {
         blue: 'hover:bg-blue-500',
         green: 'hover:bg-green-500',
         yellow: 'hover:bg-yellow-500',
+        black: 'hover:bg-gray-500',
     };
 
     const hoverClass = colorClasses[color] || 'hover:bg-transparent'; 
