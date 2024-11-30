@@ -1,6 +1,14 @@
 import Image from "next/image";
 import img1 from "@/app/Images/imgpitalito.png";
 import servicios from "@/app/Images/Serv-disponibles.png";
+import Slider from "./Components/Slider";
+
+import s1 from "@/app/Images/Slider1/image.png";
+import s2 from "@/app/Images/Slider1/image2.png";
+import s3 from "@/app/Images/Slider1/image3.png";
+
+const images = [s1, s2, s3] 
+
 
 export default function Home() {
 	return (
@@ -21,6 +29,42 @@ export default function Home() {
                         alt="servicios" 
                         className="ml-10 max-w-full object-contain"
                     />
+                </div>
+            </div>
+
+            <div className="flex justify-center items-center mt-24">
+                <div className="mr-24">
+                    <Slider images={images}/>
+                </div>
+
+                <div className="tracking-wide text-center ml-24">
+                    <p className="text-4xl my-6 font-bold text-black">Manejando controles</p>
+                    <p className="text-4xl my-6 font-bold text-black">de seguridad antes</p>
+                    <p className="text-4xl my-6 font-bold text-black">de cada jornada</p>
+                </div>
+            </div>
+
+            <div className="flex justify-center items-center mt-24">
+                <div className="tracking-wide text-center mr-24">
+                    <p className="text-4xl my-6 font-bold text-black">Antes de cada jornada</p>
+                    <p className="text-4xl my-6 font-bold text-black">verificando la seguridad</p>
+                    <p className="text-4xl my-6 font-bold text-black">para todos los pasajero</p>
+                </div>
+
+                <div className="ml-24">
+                    <Slider images={images}/>
+                </div>
+            </div>
+
+            <div className="flex justify-center items-center mt-24">
+                <div className="mr-24">
+                    <Slider images={images}/>
+                </div>
+
+                <div className="tracking-wide text-center ml-24">
+                    <p className="text-4xl my-6 font-bold text-black">Y asi finalmente</p>
+                    <p className="text-4xl my-6 font-bold text-black">poder brindarte</p>
+                    <p className="text-4xl my-6 font-bold text-black">la mejor experiencia</p>
                 </div>
             </div>
 		</>

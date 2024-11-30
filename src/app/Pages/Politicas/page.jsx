@@ -12,8 +12,7 @@ export default function Politicas() {
     return(
         <>
             <div>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4b5563 " fill-opacity="1" d="M0,224L80,234.7C160,245,320,267,480,266.7C640,267,800,245,960,234.7C1120,224,1280,224,1360,224L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
-                    <div className="w-full h-auto bg-gray-600">
+                    <div className="w-full h-auto bg-gray-600 md:mt-52 md:mb-40 py-20">
                         <p className="text-4xl text-white text-center font-bold tracking-wider uppercase">Para nosotros brindarte el mejor servicio es lo más</p>
                         <p className="text-4xl text-white text-center font-bold pt-8 tracking-wider uppercase">importante, y estas son nuestras políticas mas comunes</p>
 
@@ -50,7 +49,6 @@ export default function Politicas() {
                             </div>
                         </div>
                     </div>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4b5563 " fill-opacity="1" d="M0,96L120,101.3C240,107,480,117,720,122.7C960,128,1200,128,1320,128L1440,128L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>            
             </div>
 
             <div className="w-max mx-auto text-3xl font-bold text-black">
