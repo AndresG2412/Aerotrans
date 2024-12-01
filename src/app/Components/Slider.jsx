@@ -21,7 +21,7 @@ export default function Slider({ images }) {
       <div className="flex gap-4">
         <button onClick={handlePrev} className="py-2 px-4"><ArrowBigLeft/></button>
 
-        <Image src={images[imageIndex]} alt={`Image ${imageIndex}`} className="w-[500px] rounded-xl shadow-2xl"/>
+        <Image src={images[imageIndex]} alt={`Image ${imageIndex}`} className="w-[500px] rounded-xl shadow-2xl h-[350px]"/>
         
         <button onClick={handleNext} className="py-2 px-4"><ArrowBigRight/></button>
       </div>
