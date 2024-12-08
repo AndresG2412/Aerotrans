@@ -14,9 +14,9 @@ export default function Contacto() {
                 <Button titulo={"WhatsApp"} color={"green"} image={wpp}></Button>
             </div>
             <div className="w-1/2 h-[450px] my-auto mr-32 flex flex-col justify-center">
-                <input type="text" placeholder="Nombre Completo" className="text-2xl mt-4 pt-4 pb-2 px-2 border-black border-b-8 bg-white rounded-lg focus:border-red-600 selection:"/>
-                <input type="email" placeholder="Correo Electronico" className="text-2xl mt-4 pt-4 pb-2 px-2 border-black border-b-8 bg-white rounded-lg focus:border-red-600 selection:"/>
-                <input placeholder="Describenos tu solicitud" className="text-2xl mt-4 pt-4 pb-2 px-2 border-black border-b-8 bg-white rounded-lg focus:border-red-600 selection:"></input>            
+                <input type="text" placeholder="Nombre Completo" className="text-2xl mt-4 pt-4 pb-2 px-2 border-black border-b-8 bg-white rounded-lg focus:border-red-600"/>
+                <input type="email" placeholder="Correo Electronico" className="text-2xl mt-4 pt-4 pb-2 px-2 border-black border-b-8 bg-white rounded-lg focus:border-red-600"/>
+                <textarea id="message" rows="4" placeholder="Describenos tu solicitud" className="resize-none text-2xl mt-4 pt-4 pb-2 px-2 border-black border-b-8 bg-white rounded-lg focus:border-red-600"></textarea>            
                 <Button titulo={"Enviar"} color={"red"} image={enviar}></Button>
                 </div>
         </div>

@@ -87,7 +87,7 @@ export default function Home() {
                         <ImageUpload/>
                     </div>
 
-                    <textarea id="message" rows="4" class="mx-auto w-3/4 resize-none py-2 px-4 rounded-lg bg-transparent shadow-2xl border-2 border-dashed border-[#0000001a]" placeholder="Escribenos tu experiencia"></textarea>
+                    <textarea id="message" rows="4" className="mx-auto w-3/4 resize-none py-2 px-4 rounded-lg bg-transparent shadow-2xl border-2 border-dashed border-[#0000001a]" placeholder="Escribenos tu experiencia"></textarea>
                     <Button titulo={"Enviar"} color={"red"} image={enviar}></Button>
                 </div>
             </div>
