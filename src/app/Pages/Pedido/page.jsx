@@ -1,8 +1,11 @@
 "use client";
 
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
 
 export default function PedidoForm() {
+    const router = useRouter();
+
     const {
         register,
         handleSubmit,
@@ -22,6 +25,7 @@ export default function PedidoForm() {
             if (response.ok) {
                 const result = await response.json();
                 alert("¡Pedido enviado con éxito!");
+                router.push("/Pages/Pedido/View"); // Redirige a la página "/View"
             } else {
                 const error = await response.json();
                 alert("Hubo un problema al enviar el pedido.");
@@ -138,7 +142,7 @@ export default function PedidoForm() {
                 {errors.equipaje && <p className="text-red-500">{errors.equipaje.message}</p>}
             </div>
 
-            <button type="submit" className="mt-4 bg-blue-500 text-white px-6 py-2 rounded" onClick={"./View"}>
+            <button type="submit" className="mt-4 bg-blue-500 text-white px-6 py-2 rounded">
                 Pedir Carro
             </button>
         </form>
