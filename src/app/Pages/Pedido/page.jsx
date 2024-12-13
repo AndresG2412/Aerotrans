@@ -12,21 +12,21 @@ export default function App() {
         <form className="mt-40 w-2/3 px-6 rounded-xl py-12 mx-auto formulario">
             <div className="form__group field">
                 <input type="input" className="form__field" placeholder="Name" required/>
-                <label for="nombre" className="form__label">Nombre Completo</label>
+                <label htmlFor="nombre" className="form__label">Nombre Completo</label>
             </div>
 
             <div className="form__group field">
                 <input type="tel" className="form__field" placeholder="Name" required/>
-                <label for="telefono" className="form__label">Telefono</label>
+                <label htmlFor="telefono" className="form__label">Telefono</label>
             </div>
 
             <div className="form__group field">
                 <input type="tel" className="form__field" placeholder="Name" required/>
-                <label for="direccion" className="form__label">Direccion</label>
+                <label htmlFor="direccion" className="form__label">Direccion</label>
             </div>
 
             <div className="form__group field mt-4">
-            <label for="equipaje" className="form__label">Equipaje Pesado</label>
+            <label htmlFor="equipaje" className="form__label">Equipaje Pesado</label>
                 <div className="form__options mt-4 flex gap-10">
                     <label>
                     <input type="radio" name="equipaje" value="si" required /> Sí
