@@ -15,6 +15,9 @@ export default function Footer() {
                 <div className="mr-12 hidden lg:block">
                     <span className="font-semibold tracking-wide">Mantente conectado con nosotros siempre!</span>
                 </div>
+                <div className="ml-12 hidden lg:block">
+                    <a href="../Admin" className="font-semibold tracking-wide">Entrar como Administrador</a>
+                </div>
             </div>
 
             {/* <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}

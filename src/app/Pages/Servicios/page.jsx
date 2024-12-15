@@ -30,7 +30,6 @@ export default function Servicios() {
                 <p className="font-bold text-3xl text-black text-center tracking-wider mb-12">RUTA DE CAMIONETAS</p>
                 <Slider images={images} />
             </div>
-
         </div>
     );
 }
