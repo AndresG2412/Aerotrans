@@ -14,14 +14,14 @@ export default function Login() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(data),
+                body:  JSON.stringify(data),
             });
 
             const result = await res.json();
 
             if (result.success) {
                 alert("Login exitoso");
-                router.push('/dashboard'); // Redirige a la ruta deseada
+                router.push('/src/app/Admin/Page'); // Redirige a la ruta deseada
             } else {
                 alert(result.message); // Credenciales incorrectas
             }
@@ -47,13 +47,13 @@ export default function Login() {
                 </div>
 
                 <div>
-                    <label>Contraseña:</label>
+                    <label>Nombre:</label>
                     <input 
-                        {...register("contraseña", { required: "Contraseña es obligatoria", minLength: 8 })} 
-                        type="password" 
-                        placeholder="Contraseña" 
+                        {...register("nombre", { required: "El nombre es obligatorio", minLength: 8 })} 
+                        type="text" 
+                        placeholder="Nombre" 
                     />
-                    {errors.contraseña && <p>{errors.contraseña.message}</p>}
+                    {errors.nombre && <p>{errors.nombre.message}</p>}
                 </div>
 
                 <button type="submit">Ingresar</button>

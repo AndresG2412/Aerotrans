@@ -26,6 +26,7 @@ export async function POST(request){
             telefono,
             equipaje
         });
+        
     } catch (error) {
         console.log(error);
 
