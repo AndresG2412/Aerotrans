@@ -32,32 +32,45 @@ export default function Login() {
     };
 
     return (
-        <div className="mt-40">
-            <p>Bienvenido Administrador</p>
-            <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="flex justify-center">
+            <div className="md:w-1/3 w-3/4 h-auto bg-blue-950 mt-40 rounded-xl">
+                <p className="font-bold text-white tracking-wider text-center pt-6 pb-2 md:text-3xl text-xl md">Administrador Aerotrans</p>
+                <p className="font-bold text-white tracking-wide text-center pt-2 pb-4 text-xl">Iniciar Sección</p>
 
-                <div>
-                    <label>Correo Electrónico:</label>
-                    <input 
-                        {...register("correo", { required: "Correo es obligatorio" })} 
-                        type="email" 
-                        placeholder="Correo Electrónico" 
-                    />
-                    {errors.correo && <p>{errors.correo.message}</p>}
-                </div>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className="flex flex-col text-center">
+                        <label className="pt-6 pb-2 text-white text-xl">Correo Electrónico:</label>
+                        <input 
+                            {...register("correo", { required: "Correo es obligatorio" })} 
+                            type="email" 
+                            placeholder="Correo Electrónico"
+                            className="py-2 rounded-xl px-4 border-2 border-black w-3/4 mx-auto"
+                        />
+                        {errors.correo && <p className="text-red-500 text-xl">{errors.correo.message}</p>}
+                    </div>
 
-                <div>
-                    <label>Nombre:</label>
-                    <input 
-                        {...register("nombre", { required: "El nombre es obligatorio", minLength: 8 })} 
-                        type="text" 
-                        placeholder="Nombre" 
-                    />
-                    {errors.nombre && <p>{errors.nombre.message}</p>}
-                </div>
+                    <div className="flex flex-col text-center">
+                        <label className="pt-6 pb-2 text-white text-xl">Nombre:</label>
+                        <input 
+                            {...register("nombre", { required: "El nombre es obligatorio", minLength: 8 })} 
+                            type="text" 
+                            placeholder="Nombre"
+                            className="py-2 rounded-xl px-4 border-2 border-black w-3/4 mx-auto"
+                        />
+                        {errors.nombre && <p className="text-red-500 text-xl">{errors.nombre.message}</p>}
+                    </div>
 
-                <button type="submit">Ingresar</button>
-            </form>
+                    <div className="flex justify-center">
+                        <button 
+                            type="submit" 
+                            className="text-xl my-6 font-semibold px-4 py-2 border-2 border-black rounded-xl bg-white"
+                        >
+                            Ingresar
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
+
     );
 }
