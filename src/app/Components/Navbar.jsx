@@ -23,13 +23,13 @@ export default function Navbar2() {
                             </div>
                         </div>
                         <div className="hidden md:block">
-                            <div className="ml-4 flex items-center space-x-6">
+                            {/* <div className="ml-4 flex items-center space-x-6">
                             <Link href="../Pages/Pedido" className="text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">PEDIR TAXI</Link>
                             <Link href="../Pages/Politicas" className="text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">POLITICAS</Link>
                             <Link href="../Pages/Nosotros" className="text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">NOSOTROS</Link>
                             <Link href="../Pages/Contacto" className="text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">CONTACTO</Link>
                             <Link href="../Pages/Servicios" className="text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">SERVICIOS</Link>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="md:hidden flex items-center">
                             <button className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-red-600" onClick={toggleNavbar}>
