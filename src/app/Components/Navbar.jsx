@@ -1,63 +1,75 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import logo from "../Images/logo.png";
+import React, { useState } from 'react'; // Importa useState
+import menu from '../Images/Navbar/image.png';
+import close from '../Images/Navbar/image copy.png';
+import logo from '../Images/Navbar/logo.png'
+import logosm from '../Images/Navbar/logosm.png'
+
 import Image from 'next/image';
-import React, { useState } from "react";
+import Link from "next/link";
 
-export default function Navbar2() {
+export default function Navbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar el menú
 
-    const [isClick, setisClick] = useState(false);
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen); // Cambia el estado al hacer clic
+    };
 
-    const toggleNavbar = () => {
-        setisClick(!isClick)
-    }
-    return(
-        <>
-            <nav className="bg-[#D9D9D9] z-50 fixed top-0 left-0 right-0 w-[95%] mx-auto my-4 rounded-2xl border-2 border-black" >
-                <div className="mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex items-center justify-between h-16">
-                        <div className="flex items-center">
-                            <div className="flex-shrink-0">
-                                <Link href="/" className="font-bold text-2xl"><Image priority={false} className="h-10 w-52" src={logo} alt="Logo"/></Link>
-                            </div>
-                        </div>
-                        <div className="hidden md:block">
-                            {/* <div className="ml-4 flex items-center space-x-6">
-                            <Link href="../Pages/Pedido" className="text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">PEDIR TAXI</Link>
-                            <Link href="../Pages/Politicas" className="text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">POLITICAS</Link>
-                            <Link href="../Pages/Nosotros" className="text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">NOSOTROS</Link>
-                            <Link href="../Pages/Contacto" className="text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">CONTACTO</Link>
-                            <Link href="../Pages/Servicios" className="text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">SERVICIOS</Link>
-                            </div> */}
-                        </div>
-                        <div className="md:hidden flex items-center">
-                            <button className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-red-600" onClick={toggleNavbar}>
-                                {isClick ? (
-                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="100" viewBox="0 0 50 50">
-                                    <path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"></path>
-                                    </svg>
-                                ) : (
-                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="100" viewBox="0 0 50 50">
-                                    <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"></path>
-                                    </svg>
-                                )}
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                {isClick && (
-                    <div className="md:hidden">
-                        <div className="px-2 pt-2 pb-3 space-y-4 sm:px-3 ">
-                            <Link href="../Pages/Pedido" className="block text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">PEDIR TAXI</Link>
-                            <Link href="../Pages/Politicas" className="block text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">POLITICAS</Link>
-                            <Link href="../Pages/Nosotros" className="block text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">NOSOTROS</Link>
-                            <Link href="../Pages/Contacto" className="block text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">CONTACTO</Link>
-                            <Link href="../Pages/Servicios" className="block text-center font-bold text-xl hover:text-red-600 transition-colors duration-400">SERVICIOS</Link>
-                        </div>
-                    </div>
-                )}
-            </nav>
-        </>
+    return (
+        <nav className="bg-white shadow-xl w-[100%]">
+            <ul className="w-[100%] flex justify-end items-center">
+                <li className="h-[60px] mr-auto">
+                    <Link className="h-[100%] px-[30px] flex items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="/">
+                        <Image priority={false} className="h-9 w-auto imagenes" src={logo} alt="Logo"/>
+                        <Image priority={false} className="h-9 w-auto hidden show-image" src={logosm} alt="Logo"/>
+                    </Link>
+                </li>
+                <li className="h-[60px]">
+                    <Link className="h-[100%] px-[20px] hide-on-small flex items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Pedido">PEDIR TAXI</Link>
+                </li>
+                <li className="h-[60px]">
+                    <Link className="h-[100%] px-[20px] hide-on-small flex items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Politicas">POLITICAS</Link>
+                </li>
+                <li className="h-[60px]">
+                    <Link className="h-[100%] px-[20px] hide-on-small flex items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Nosotros">NOSOTROS</Link>
+                </li>
+                <li className="h-[60px]">
+                    <Link className="h-[100%] px-[20px] hide-on-small flex items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Contacto">CONTACTO</Link>
+                </li>
+                <li className="h-[60px]">
+                    <Link className="h-[100%] px-[20px] hide-on-small flex items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Servicios">SERVICIOS</Link>
+                </li>
+                <li className="h-[60px]">
+                    <button onClick={toggleMenu} className="h-[100%] px-[30px] hidden show-burger items-center">
+                        <Image priority={false} className="w-7 h-auto" src={menu} alt="Menu"/>
+                    </button>
+                </li>
+            </ul>
+
+            {/* Menú desplegable */}
+            <ul className={`menu-dropdown backdrop-blur-xs bg-[rgba(255,255,255,0.2)] items-start fixed top-0 right-0 h-[100vh] z-50 shadow-xl flex-col justify-start ${isMenuOpen ? 'flex' : 'hidden'}`}>
+                <li className="h-[60px] w-[100%]">
+                    <button onClick={toggleMenu} className="w-[100%] h-[100%] px-[30px] flex items-center justify-end hover:bg-[#f0f0f0] hover:transition-all">
+                        <Image priority={false} className="w-7 h-auto" src={close} alt="Close"/>
+                    </button>
+                </li>
+                <li className="h-[60px] w-[100%]">
+                    <Link className="w-[100%] h-[100%] px-[60px] flex justify-center items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Pedido">PEDIR TAXI</Link>
+                </li>
+                <li className="h-[60px] w-[100%]">
+                    <Link className="w-[100%] h-[100%] px-[60px] flex justify-center items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Politicas">POLITICAS</Link>
+                </li>
+                <li className="h-[60px] w-[100%]">
+                    <Link className="w-[100%] h-[100%] px-[60px] flex justify-center items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Nosotros">NOSOTROS</Link>
+                </li>
+                <li className="h-[60px] w-[100%]">
+                    <Link className="w-[100%] h-[100%] px-[60px] flex justify-center items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Contacto">CONTACTO</Link>
+                </li>
+                <li className="h-[60px] w-[100%]">
+                    <Link className="w-[100%] h-[100%] px-[60px] flex justify-center items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Servicios">SERVICIOS</Link>
+                </li>
+            </ul>
+        </nav>
     );
 }
