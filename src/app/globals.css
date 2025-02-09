@@ -141,3 +141,28 @@
 .formulario{
   box-shadow: 0px 0px 30px black;
 }
+
+@media (max-width: 1000px) {
+  .hide-on-small {
+      display: none;
+  }
+  .show-burger {
+      display: block;
+  }
+  .imagenes {
+      display: none;
+  }
+  .show-image {
+      display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu-dropdown {
+      width: 100%;
+  }
+  .texto-menu {
+      justify-content: center;
+      justify-items: center;
+  }
+}
