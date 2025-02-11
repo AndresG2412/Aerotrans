@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
                         <Template>
                             {children}
                         </Template>
-                    <Footer/>
+                    {/* <Footer/> */}
                 </div>
             </body>
         </html>

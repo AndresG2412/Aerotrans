@@ -8,20 +8,19 @@ export default function Slider({ images }) {
     const [imageIndex, setImageIndex] = useState(0);
 
     const handleNext = () => {
-        setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     };
 
-  const handlePrev = () => {
-    setImageIndex((prevIndex) =>
-        (prevIndex - 1 + images.length) % images.length);
+    const handlePrev = () => {
+      setImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     };
 
   return (
     <>
-      <div className="flex gap-4">
+      <div className="flex gap-4 w-2/3 md:w-auto items-center">
         <button onClick={handlePrev} className="py-2 px-4"><ArrowBigLeft/></button>
 
-        <Image src={images[imageIndex]} alt={`Image ${imageIndex}`} className="w-[500px] rounded-xl shadow-2xl h-[350px]"/>
+        <Image src={images[imageIndex]} alt={`Image ${imageIndex}`} className="md:w-auto md:h-64 rounded-xl shadow-2xl"/>
         
         <button onClick={handleNext} className="py-2 px-4"><ArrowBigRight/></button>
       </div>

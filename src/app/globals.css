@@ -166,3 +166,9 @@
       justify-items: center;
   }
 }
+
+@media (min-width: 400px) {
+  .texto-inicial {
+      font-size: 3.75rem;
+  }
+}
