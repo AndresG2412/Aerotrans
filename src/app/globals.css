@@ -144,16 +144,23 @@
 
 @media (max-width: 1000px) {
   .hide-on-small {
-      display: none;
+    display: none;
   }
   .show-burger {
-      display: block;
+    display: block;
   }
   .imagenes {
-      display: none;
+    display: none;
   }
   .show-image {
-      display: block;
+    display: block;
+  }
+}
+
+@media (min-height: 1000px) {
+  .responsible-1000{
+    display: block;
+    padding-top: 9rem;
   }
 }
 
