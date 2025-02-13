@@ -17,12 +17,10 @@ export default function Slider({ images }) {
 
   return (
     <>
-      <div className="flex gap-4 w-2/3 md:w-auto items-center">
-        <button onClick={handlePrev} className="py-2 px-4"><ArrowBigLeft/></button>
-
-        <Image src={images[imageIndex]} alt={`Image ${imageIndex}`} className="md:w-auto md:h-64 rounded-xl shadow-2xl"/>
-        
-        <button onClick={handleNext} className="py-2 px-4"><ArrowBigRight/></button>
+      <div className="flex justify-center">
+        <button onClick={handlePrev} className="py-2 md:px-4"><ArrowBigLeft/></button>
+          <Image src={images[imageIndex]} alt={`Image ${imageIndex}`} className="md:w-auto md:h-64 rounded-xl shadow-2xl w-3/5"/>
+        <button onClick={handleNext} className="py-2 md:px-4"><ArrowBigRight/></button>
       </div>
     </>
   );

@@ -161,6 +161,7 @@
   .responsible-1000{
     display: block;
     padding-top: 9rem;
+    height: auto;
   }
 }
 
