@@ -88,6 +88,8 @@ export default function Home() {
                     <p className="text-3xl my-3 md:my-5 font-semibold text-black">la mejor experiencia</p>
                 </div>
             </div>
+
+            {/* inicio seccion comentarios */}
         </>
 	);
 }
