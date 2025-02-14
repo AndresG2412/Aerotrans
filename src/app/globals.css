@@ -173,6 +173,14 @@
       justify-content: center;
       justify-items: center;
   }
+  .custum-file-upload {
+    height: 110px;
+    width: 200px;
+    gap: 0px;
+  }
+  .custum-file-upload .icon svg {
+    height: 50px;
+  }
 }
 
 @media (min-width: 400px) {
