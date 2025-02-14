@@ -31,10 +31,10 @@ export default function Home() {
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat',
                     }}>
-                    <div className="text-center md:text-start font-semibold text-xl md:text-3xl">
-                        <p className="my-2 md:my-4">Con muchos servicios</p>
-                        <p className="my-2 md:my-4">disponibles para cada</p>
-                        <p className="my-2 md:my-4">necesidad y con seguridad</p>
+                    <div className="text-center md:text-start font-semibold text-3xl md:text-3xl tracking-wide">
+                        <p className="my-1 md:my-4">Con muchos servicios</p>
+                        <p className="my-1 md:my-4">Disponibles para cada</p>
+                        <p className="my-1 md:my-4">Necesidad y con seguridad</p>
                     </div>
                     <Image 
                         src={servicios} 
@@ -53,18 +53,18 @@ export default function Home() {
                     </div>
 
                     <div className="md:pl-8 mt-6 md:mt-0 text-center md:text-start">
-                        <p className="text-3xl my-3 md:my-5 font-semibold text-black">Manejando controles</p>
-                        <p className="text-3xl my-3 md:my-5 font-semibold text-black">de seguridad antes</p>
-                        <p className="text-3xl my-3 md:my-5 font-semibold text-black">de cada jornada</p>
+                        <p className="text-2xl md:my-5 font-semibold text-black">Manejando controles</p>
+                        <p className="text-2xl md:my-5 font-semibold text-black">de seguridad antes</p>
+                        <p className="text-2xl md:my-5 font-semibold text-black">de cada jornada</p>
                     </div>
                 </div>
 
                 {/* segundo slider */}
                 <div className="md:flex justify-center items-center md:mt-24 mb-12 md:mb-0">
                     <div className="hidden md:block md:pr-8 mt-6 md:mt-0 text-center md:text-start">
-                        <p className="text-3xl my-3 md:my-5 font-semibold text-black">Antes de cada jornada</p>
-                        <p className="text-3xl my-3 md:my-5 font-semibold text-black">verificando la seguridad</p>
-                        <p className="text-3xl my-3 md:my-5 font-semibold text-black">para todos los pasajero</p>
+                        <p className="text-2xl md:my-5 font-semibold text-black">Antes de cada jornada</p>
+                        <p className="text-2xl md:my-5 font-semibold text-black">verificando la seguridad</p>
+                        <p className="text-2xl md:my-5 font-semibold text-black">para todos los pasajero</p>
                     </div>
 
                     <div className="">
@@ -72,9 +72,9 @@ export default function Home() {
                     </div>
 
                     <div className="block md:hidden md:pr-8 mt-6 md:mt-0 text-center md:text-start">
-                        <p className="text-3xl my-3 md:my-5 font-semibold text-black">Antes de cada jornada</p>
-                        <p className="text-3xl my-3 md:my-5 font-semibold text-black">verificando la seguridad</p>
-                        <p className="text-3xl my-3 md:my-5 font-semibold text-black">para todos los pasajero</p>
+                        <p className="text-2xl md:my-5 font-semibold text-black">Antes de cada jornada</p>
+                        <p className="text-2xl md:my-5 font-semibold text-black">verificando la seguridad</p>
+                        <p className="text-2xl md:my-5 font-semibold text-black">para todos los pasajero</p>
                     </div>
 
                 </div>
@@ -86,9 +86,9 @@ export default function Home() {
                     </div>
 
                     <div className="md:pl-8 mt-6 md:mt-0 text-center md:text-start">
-                        <p className="text-3xl my-3 md:my-5 font-semibold text-black">Y asi finalmente</p>
-                        <p className="text-3xl my-3 md:my-5 font-semibold text-black">poder brindarte</p>
-                        <p className="text-3xl my-3 md:my-5 font-semibold text-black">la mejor experiencia</p>
+                        <p className="text-2xl md:my-5 font-semibold text-black">Y asi finalmente</p>
+                        <p className="text-2xl md:my-5 font-semibold text-black">poder brindarte</p>
+                        <p className="text-2xl md:my-5 font-semibold text-black">la mejor experiencia</p>
                     </div>
                 </div>
             </div>

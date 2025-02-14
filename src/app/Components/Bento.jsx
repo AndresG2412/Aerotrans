@@ -8,7 +8,7 @@ import img from "@/app/Images/Bento/image.png"
 
 export default function Bento() {
     return (
-        <div className="grid grid-cols-5 grid-rows-5 mt-36 gap-4 px-48">
+        <div className="hidden md:grid grid-cols-5 grid-rows-5 mt-36 gap-4 px-48">
 
             <div className="col-start-1 col-end-2 row-start-1 row-end-3 bg-gray-100 shadow-xl rounded-xl text-center flex items-center justify-center">
                 <div>
