@@ -21,17 +21,15 @@ export default function Footer() {
 
             {/* <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}
             <div className="mx-auto my-12 w-3/4 ">
-                <div className="flex justify-between">
-                    <div className="">
-                        <Image priority={false} className="" src={img1} alt="Logo"/>
-                    </div>
+                <div className="md:flex justify-between">
+                    <Image priority={false} className="mx-auto md:mx-0" src={img1} alt="Logo"/>
 
-                    <div className="my-auto">
-                        <h6 className="mb-8 font-bold uppercase text-center text-2xl tracking-widest">
+                    <div className="mt-10 md:my-auto">
+                        <h6 className="font-bold uppercase text-center text-2xl tracking-widest">
                             Contactos
                         </h6>
 
-                        <div className="flex gap-10 justify-center">
+                        <div className="flex justify-center">
                             <Social />
                         </div>
                     </div>
