@@ -6,7 +6,13 @@ import enviar from "@/app/Images/Contacto/enviar.png"
 export default function Contacto() {
     return(
         <div className="h-screen flex items-center">
-            <div className="mt-12 :mt-0 w-full md:h-auto md:bg-cover md:flex  bg-red-200">
+            <div className="mt-12 w-full md:h-auto md:bg-cover md:flex boxShadow" 
+                style={{
+                    backgroundImage: `url(${b_c.src})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                }}>
             <div className="md:w-1/2 pt-6 pb-4 md:h-[450px] my-auto md:ml-32 text-center flex flex-col justify-center">
                 <p className="font-semibold text-3xl md:text-4xl my-2 tracking-wide">Deseas comunicarte?</p>
                 <p className="font-semibold text-3xl md:text-4xl my-2 tracking-wide">Envianos tu solicitud,</p>
