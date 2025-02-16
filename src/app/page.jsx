@@ -1,5 +1,6 @@
 import Image from "next/image";
-import img1 from "@/app/Images/imgpitalito.png";
+
+import Bienvenida from './Images/Bienvenida.png'
 import servicios from "@/app/Images/Serv-disponibles.png";
 import Slider from "./Components/Slider";
 import Rating from "./Components/Rating";
@@ -24,12 +25,13 @@ export default function Home() {
                 <h1 style={{ fontFamily: "'Inknut Antiqua', serif" }} className="font-bold texto-inicial text-5xl md:text-8xl text-center mt-3">AEROTRANS</h1>
             
                 <div 
-                    className="bg-[#d4d4d4] mt-24 md:mt-16 w-full h-auto block md:flex md:justify-center md:items-center md:gap-x-8 py-5 shadow-2xl"
+                    className="bg-[#d4d4d4] mt-28 md:mt-16 w-full h-auto block md:flex md:justify-center md:items-center md:gap-x-8 py-5 shadow-2xl"
                     style={{
-                        backgroundImage: `url('https://files.alerta.rcnradio.com/alerta_tolima_prod/public/styles/image800x600/public/2020-12/pitalito_aleja_herrera_0_0_0.jpg?LZIM3N7Ktl7.sVz0JQ5kjXwV6hm8mSZt&itok=EZS94Q-8')`,
+                        backgroundImage: `url(${Bienvenida.src})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat',
+                        backgroundColor: '#999'
                     }}>
                     <div className="text-center md:text-start font-semibold text-3xl md:text-3xl tracking-wide">
                         <p className="my-1 md:my-4">Con muchos servicios</p>
