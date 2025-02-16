@@ -35,8 +35,8 @@
 
 /* From Uiverse.io by Yaya12085 */ 
 .custum-file-upload {
-  height: 200px;
-  width: 300px;
+  height: 150px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   align-items: space-between;
@@ -58,7 +58,7 @@
 }
 
 .custum-file-upload .icon svg {
-  height: 80px;
+  height: 50px;
   fill: #4b5563;
 }
 
