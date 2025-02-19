@@ -25,13 +25,12 @@ export default function Home() {
                 <h1 style={{ fontFamily: "'Inknut Antiqua', serif" }} className="font-bold texto-inicial text-5xl md:text-8xl text-center mt-3">AEROTRANS</h1>
             
                 <div 
-                    className="bg-[#d4d4d4] mt-28 md:mt-16 w-full h-auto block md:flex md:justify-center md:items-center md:gap-x-8 py-5 shadow-2xl"
+                    className="boxShadow mt-28 md:mt-16 w-full h-auto block md:flex md:justify-center md:items-center md:gap-x-8 py-5 shadow-2xl"
                     style={{
                         backgroundImage: `url(${Bienvenida.src})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat',
-                        backgroundColor: '#999'
                     }}>
                     <div className="text-center md:text-start font-semibold text-3xl md:text-3xl tracking-wide">
                         <p className="my-1 md:my-4">Con muchos servicios</p>
@@ -92,28 +91,6 @@ export default function Home() {
                         <p className="text-2xl md:my-5 font-semibold text-black">poder brindarte</p>
                         <p className="text-2xl md:my-5 font-semibold text-black">la mejor experiencia</p>
                     </div>
-                </div>
-            </div>
-
-            {/* Comentarios */}
-            <div className="mt-24">
-                <p className="font-bold text-2xl text-center">CALIFICA TU EXPERIENCIA</p>
-                <div className="mt-4 border-[3px] border-black rounded-2xl md:w-[45rem] h-auto mx-10 md:mx-auto flex flex-col p-6">
-                    <div className="max-w-full flex flex-col justify-center gap-6 md:gap-16 mb-6">
-                        <div>
-                            <input type="text" placeholder="Nombre completo" className="placeholder-[#444] py-2 px-4 rounded-lg bg-transparent shadow-xl border-2 border-dashed border-[#777] block my-4 w-full"/>
-                            <input type="email" placeholder="Correo electronico" className="placeholder-[#444] py-2 px-4 rounded-lg bg-transparent shadow-xl border-2 border-dashed border-[#777] block my-4 w-full"/>
-                            <div className="mt-8 flex justify-center">
-                                <Rating/>
-                            </div>
-                        </div>
-                        <div className="mx-auto">
-                            <ImageUpload/>
-                        </div>
-                    </div>
-
-                    <textarea id="message" rows="4" className="placeholder-[#444] mx-auto w-full md:w-3/4 resize-none py-2 px-4 rounded-lg bg-transparent shadow-2xl border-2 border-dashed border-[#777]" placeholder="Escribenos tu experiencia"></textarea>
-                    <Button titulo={"Enviar"} color={"red"} image={enviar}></Button>
                 </div>
             </div>
         </>

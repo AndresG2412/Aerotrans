@@ -2,9 +2,12 @@ import Button from "@/app/Components/Botton";
 import b_c from "@/app/Images/Contacto/image.png"
 import wpp from "@/app/Images/Contacto/wpp.png"
 import enviar from "@/app/Images/Contacto/enviar.png"
+import Rating from "@/app/Components/Rating";
+import ImageUpload from "@/app/Components/Image";
 
 export default function Contacto() {
     return(
+        <>
         <div className="h-screen flex items-center">
             <div className="mt-12 w-full md:h-auto md:bg-cover md:flex boxShadow" 
                 style={{
@@ -28,5 +31,28 @@ export default function Contacto() {
                 </div>
             </div>
         </div>
+
+            {/* Comentarios */}
+            <div className="mt-12">
+                <p className="font-bold text-2xl text-center">CALIFICA TU EXPERIENCIA</p>
+                <div className="mt-4 border-[3px] border-black rounded-2xl md:w-[45rem] h-auto mx-10 md:mx-auto flex flex-col p-6">
+                    <div className="max-w-full flex flex-col justify-center gap-6 md:gap-16 mb-6">
+                        <div>
+                            <input type="text" placeholder="Nombre completo" className="placeholder-[#444] py-2 px-4 rounded-lg bg-transparent shadow-xl border-2 border-dashed border-[#777] block my-4 w-full"/>
+                            <input type="email" placeholder="Correo electronico" className="placeholder-[#444] py-2 px-4 rounded-lg bg-transparent shadow-xl border-2 border-dashed border-[#777] block my-4 w-full"/>
+                            <div className="mt-8 flex justify-center">
+                                <Rating/>
+                            </div>
+                        </div>
+                        <div className="mx-auto">
+                            <ImageUpload/>
+                        </div>
+                    </div>
+
+                    <textarea id="message" rows="4" className="placeholder-[#444] mx-auto w-full md:w-3/4 resize-none py-2 px-4 rounded-lg bg-transparent shadow-2xl border-2 border-dashed border-[#777]" placeholder="Escribenos tu experiencia"></textarea>
+                    <Button titulo={"Enviar"} color={"red"} image={enviar}></Button>
+                </div>
+            </div>
+        </>
     );
 }
