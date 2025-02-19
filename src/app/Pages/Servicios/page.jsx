@@ -12,23 +12,28 @@ const images = [s1, s2, s3]
 
 export default function Servicios() {
     return(
-        <div className="mt-40">
-            <div className="flex justify-center items-center gap-20">
+        <div className="">
+            <div className="relative md:flex justify-center items-center gap-20 h-screen">
                 <Image src={expo1} alt="expo-1" className="rounded-xl w-1/3"/>
                 <div className="w-1/3">
                     <p className="font-bold text-blakc tracking-wide text-3xl text-center">Servicio de Taxi</p>
                     <Button titulo={"Whatsapp"} color={"green"} image={wpp}></Button>
                     <Button titulo={"Reportar"} color={"red"} image={rpt}></Button>
                 </div>
+
+                <p className="absolute uppercase bottom-10 text-3xl tracking-wide font-semibold font-sans border-b-2 border-black rounded-md pb-2 px-4">
+                    Conoce nuestras rutas!</p>
             </div>
 
-            <div className="mt-40 flex flex-col items-center">
-                <p className="font-bold text-3xl text-black text-center tracking-wider mb-12">RUTA DE BUSETAS</p>
-                <Slider images={images} />
-            </div>
-            <div className="mt-40 flex flex-col items-center">
-                <p className="font-bold text-3xl text-black text-center tracking-wider mb-12">RUTA DE CAMIONETAS</p>
-                <Slider images={images} />
+            <div className="flex justify-center items-center mt-20 gap-x-10">
+                <div className="bg-purple-100">
+                    <p className="font-bold text-3xl text-black text-center tracking-wider mb-12">RUTA DE BUSETAS</p>
+                    <Slider images={images} />
+                </div>
+                <div className="bg-red-100">
+                    <p className="font-bold text-3xl text-black text-center tracking-wider mb-12">RUTA DE CAMIONETAS</p>
+                    <Slider images={images} />
+                </div>
             </div>
         </div>
     );
