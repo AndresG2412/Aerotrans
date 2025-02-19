@@ -13,8 +13,8 @@ export default function Politicas() {
         <>
             <div>
                     <div className="w-full h-auto bg-gray-600 md:mt-52 md:mb-40 py-20">
-                        <p className="mx-4 text-3xl md:text-4xl text-white text-center font-bold tracking-wider uppercase">Para nosotros brindarte el mejor servicio es lo más</p>
-                        <p className="mx-4 text-3xl mt-8 md:text-4xl text-white text-center font-bold tracking-wider uppercase">importante, y estas son nuestras políticas mas comunes</p>
+                        <p className="px-4 text-3xl md:text-4xl text-white text-center font-bold tracking-wider uppercase">Para nosotros brindarte el mejor servicio es lo más</p>
+                        <p className="px-8 text-3xl mt-8 md:text-4xl text-white text-center font-bold tracking-wider uppercase">importante, y estas son nuestras políticas mas comunes</p>
 
                         <div className="w-max grid grid-cols-2 md:flex mt-20 mx-auto">
 
