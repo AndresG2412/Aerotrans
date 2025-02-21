@@ -13,7 +13,7 @@ const images = [s1, s2, s3]
 export default function Servicios() {
     return(
         <div className="">
-            <div className="relative md:flex justify-center items-center gap-20 h-screen">
+            <div className="relative md:flex justify-center items-center gap-20 h-screen bg-blue-100">
                 <Image src={expo1} alt="expo-1" className="rounded-xl w-1/3"/>
                 <div className="w-1/3">
                     <p className="font-bold text-blakc tracking-wide text-3xl text-center">Servicio de Taxi</p>
@@ -21,16 +21,16 @@ export default function Servicios() {
                     <Button titulo={"Reportar"} color={"red"} image={rpt}></Button>
                 </div>
 
-                <p className="absolute uppercase bottom-10 text-3xl tracking-wide font-semibold font-sans border-b-2 border-black rounded-md pb-2 px-4">
+                <p className="bg-red-200 text-center md:absolute uppercase bottom-10 text-3xl tracking-wide font-semibold font-sans border-b-2 border-black rounded-md pb-2 px-4">
                     Conoce nuestras rutas!</p>
             </div>
 
-            <div className="flex justify-center items-center mt-20 gap-x-10">
-                <div className="bg-purple-100">
+            <div className="md:flex justify-center items-center mt-20 md:gap-x-10">
+                <div className="">
                     <p className="font-bold text-3xl text-black text-center tracking-wider mb-12">RUTA DE BUSETAS</p>
                     <Slider images={images} />
                 </div>
-                <div className="bg-red-100">
+                <div className="mt-10">
                     <p className="font-bold text-3xl text-black text-center tracking-wider mb-12">RUTA DE CAMIONETAS</p>
                     <Slider images={images} />
                 </div>
