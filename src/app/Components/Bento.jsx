@@ -1,14 +1,14 @@
 import Image from "next/image";
+import img from "@/app/Images/Bento/image.png"
 import img1 from "@/app/Images/Bento/image-2.png"
 import img2 from "@/app/Images/Bento/image-3.png"
 import img4 from "@/app/Images/Bento/image-4.png"
 import img3 from "@/app/Images/Bento/image-1.png"
 import img5 from "@/app/Images/Bento/image-5.png"
-import img from "@/app/Images/Bento/image.png"
 
 export default function Bento() {
     return (
-        <div className="hidden md:grid grid-cols-5 grid-rows-5 mt-36 gap-4 px-48">
+        <div className="hidden md:grid grid-cols-5 grid-rows-5 mt-36 gap-4 mx-8 md:mx-48">
 
             <div className="col-start-1 col-end-2 row-start-1 row-end-3 bg-gray-100 shadow-xl rounded-xl text-center flex items-center justify-center">
                 <div>

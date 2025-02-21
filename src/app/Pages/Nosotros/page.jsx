@@ -1,4 +1,5 @@
 import Bento from "@/app/Components/Bento";
+import '@/app/globals.css'
 
 export default function Nosotros() {
     return(
