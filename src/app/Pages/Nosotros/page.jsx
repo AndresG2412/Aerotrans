@@ -4,6 +4,7 @@ import '@/app/globals.css'
 export default function Nosotros() {
     return(
         <>  
+        {/* avanzar ebtno para celular */}
             <Bento/>
 
             <div className="max-w-7xl mx-8 md:mx-auto mt-28 md:mt-12">
