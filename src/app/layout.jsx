@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="es">
             <body>
-                <div className="flex flex-col">
+                <div className="">
                     <Navbar2/>
                         <Template>
                             {children}

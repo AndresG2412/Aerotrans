@@ -35,8 +35,8 @@
 
 /* From Uiverse.io by Yaya12085 */ 
 .custum-file-upload {
-  height: 200px;
-  width: 300px;
+  height: 150px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   align-items: space-between;
@@ -44,7 +44,7 @@
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  border: 2px dashed #cacaca;
+  border: 2px dashed #777;
   background-color: transparent;
   padding: 1.5rem;
   border-radius: 10px;
@@ -58,7 +58,7 @@
 }
 
 .custum-file-upload .icon svg {
-  height: 80px;
+  height: 50px;
   fill: #4b5563;
 }
 
@@ -140,4 +140,54 @@
 
 .formulario{
   box-shadow: 0px 0px 30px black;
+}
+
+.boxShadow{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;}
+
+@media (max-width: 1000px) {
+  .hide-on-small {
+    display: none;
+  }
+  .show-burger {
+    display: block;
+  }
+  .imagenes {
+    display: none;
+  }
+  .show-image {
+    display: block;
+  }
+}
+
+@media (min-height: 1000px) {
+  .responsible-1000{
+    display: block;
+    padding-top: 9rem;
+    height: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu-dropdown {
+      width: 100%;
+  }
+  .texto-menu {
+      justify-content: center;
+      justify-items: center;
+  }
+  .custum-file-upload {
+    height: 110px;
+    width: 200px;
+    gap: 0px;
+  }
+  .custum-file-upload .icon svg {
+    height: 50px;
+  }
+}
+
+@media (min-width: 400px) {
+  .texto-inicial {
+      font-size: 3.75rem;
+  }
 }

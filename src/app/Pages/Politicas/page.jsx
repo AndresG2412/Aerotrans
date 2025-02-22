@@ -13,37 +13,37 @@ export default function Politicas() {
         <>
             <div>
                     <div className="w-full h-auto bg-gray-600 md:mt-52 md:mb-40 py-20">
-                        <p className="text-4xl text-white text-center font-bold tracking-wider uppercase">Para nosotros brindarte el mejor servicio es lo más</p>
-                        <p className="text-4xl text-white text-center font-bold pt-8 tracking-wider uppercase">importante, y estas son nuestras políticas mas comunes</p>
+                        <p className="px-4 text-3xl md:text-4xl text-white text-center font-bold tracking-wider uppercase">Para nosotros brindarte el mejor servicio es lo más</p>
+                        <p className="px-8 text-3xl mt-8 md:text-4xl text-white text-center font-bold tracking-wider uppercase">importante, y estas son nuestras políticas mas comunes</p>
 
-                        <div className="w-max flex mt-20 mx-auto ">
+                        <div className="w-max grid grid-cols-2 md:flex mt-20 mx-auto">
 
-                            <div className="text-center mx-8"><Image src={p1} alt="politica_n" className="w-28 mx-auto"/>
+                            <div className="text-center md:mx-8"><Image src={p1} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
                                 <p className="font-semibold text-white">Ingerir bebidas</p>
                                 <p className="font-semibold text-white">alcoholicas</p>
                             </div>
 
-                            <div className="text-center mx-8"><Image src={p2} alt="politica_n" className="w-28 mx-auto"/>
+                            <div className="text-center md:mx-8"><Image src={p2} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
                                 <p className="font-semibold text-white">El uso de celulares</p>
                                 <p className="font-semibold text-white">mientras se conduce</p>
                             </div>
 
-                            <div className="text-center mx-8"><Image src={p3} alt="politica_n" className="w-28 mx-auto"/>
+                            <div className="text-center md:mx-8"><Image src={p3} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
                                 <p className="font-semibold text-white">Uso obligatorio de</p>
                                 <p className="font-semibold text-white">cinturon de seguridad</p>
                             </div>
 
-                            <div className="text-center mx-8"><Image src={p4} alt="politica_n" className="w-28 mx-auto"/>
+                            <div className="text-center md:mx-8"><Image src={p4} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
                                 <p className="font-semibold text-white">Descanso de 7 horas</p>
                                 <p className="font-semibold text-white">andtes de cada jornada</p>
                             </div>
 
-                            <div className="text-center mx-8"><Image src={p5} alt="politica_n" className="w-28 mx-auto"/>
+                            <div className="text-center md:mx-8"><Image src={p5} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
                                 <p className="font-semibold text-white">Traito igualitario</p>
                                 <p className="font-semibold text-white">para cualquier persona</p>
                             </div>
                             
-                            <div className="text-center mx-8"><Image src={p6} alt="politica_n" className="w-28 mx-auto"/>
+                            <div className="text-center mx-8"><Image src={p6} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
                                 <p className="font-semibold text-white">Filtros obligatorios</p>
                                 <p className="font-semibold text-white">para iniciar jornada</p>
                             </div>
@@ -51,7 +51,7 @@ export default function Politicas() {
                     </div>
             </div>
 
-            <div className="w-max mx-auto text-3xl font-bold text-black">
+            <div className="mx-8 mt-12 md:w-max md:mx-auto text-2xl md:text-3xl font-bold text-black">
                 <p className="my-3 tracking-wide">Políticas de Regulación de Velocidad:</p>
                 <p className="my-3 tracking-wide">- Carretera Nacional: 80km/h</p>
                 <p className="my-3 tracking-wide">- Carretera municipal: 40km/h</p>
@@ -60,7 +60,7 @@ export default function Politicas() {
                 <p className="my-3 tracking-wide">- Locaciones: 10km/h</p>
             </div>
 
-            <div className="text-center text-3xl font-bold text-black mt-24 mb-12">
+            <div className="text-center text-3xl font-bold text-black mt-12 md:mt-24 mb-12">
                 <p>Desea conocer las polititas</p>
                 <p>mas a profundidad?</p>
             </div>
