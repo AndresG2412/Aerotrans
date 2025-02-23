@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'; // Importa useState
+import React, { useState } from 'react';
 import menu from '../Images/Navbar/image.png';
 import close from '../Images/Navbar/image copy.png';
 import logo from '../Images/Navbar/logo.png'
@@ -10,10 +10,10 @@ import Image from 'next/image';
 import Link from "next/link";
 
 export default function Navbar() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar el menú
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen); // Cambia el estado al hacer clic
+        setIsMenuOpen(!isMenuOpen);
     };
 
     return (
@@ -55,19 +55,19 @@ export default function Navbar() {
                     </button>
                 </li>
                 <li className="h-[60px] w-[100%]">
-                    <Link className="w-[100%] h-[100%] px-[60px] flex justify-center items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Pedido">PEDIR TAXI</Link>
+                    <Link onClick={toggleMenu} className="w-[100%] h-[100%] px-[60px] flex justify-center items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Pedido">PEDIR TAXI</Link>
                 </li>
                 <li className="h-[60px] w-[100%]">
-                    <Link className="w-[100%] h-[100%] px-[60px] flex justify-center items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Politicas">POLITICAS</Link>
+                    <Link onClick={toggleMenu} className="w-[100%] h-[100%] px-[60px] flex justify-center items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Politicas">POLITICAS</Link>
                 </li>
                 <li className="h-[60px] w-[100%]">
-                    <Link className="w-[100%] h-[100%] px-[60px] flex justify-center items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Nosotros">NOSOTROS</Link>
+                    <Link onClick={toggleMenu} className="w-[100%] h-[100%] px-[60px] flex justify-center items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Nosotros">NOSOTROS</Link>
                 </li>
                 <li className="h-[60px] w-[100%]">
-                    <Link className="w-[100%] h-[100%] px-[60px] flex justify-center items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Contacto">CONTACTO</Link>
+                    <Link onClick={toggleMenu} className="w-[100%] h-[100%] px-[60px] flex justify-center items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Contacto">CONTACTO</Link>
                 </li>
                 <li className="h-[60px] w-[100%]">
-                    <Link className="w-[100%] h-[100%] px-[60px] flex justify-center items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Servicios">SERVICIOS</Link>
+                    <Link onClick={toggleMenu} className="w-[100%] h-[100%] px-[60px] flex justify-center items-center color-black text-xl font-bold tracking-wider hover:bg-[#f0f0f0] hover:transition-all" href="../Pages/Servicios">SERVICIOS</Link>
                 </li>
             </ul>
         </nav>
