@@ -7,7 +7,7 @@ export default function Nosotros() {
         {/* avanzar ebtno para celular */}
             <Bento/>
 
-            <div className="max-w-7xl mx-8 md:mx-auto mt-28 md:mt-12">
+            <div className="mx-10 xxl:mx-auto mt-28 xxl:mt-12">
                 <div className="flex items-center mb-4">
                     <hr className="flex-grow border-[3px] border-black"/>
                     <p className="text-4xl font-bold tracking-wide mx-4">MISION</p>
@@ -23,7 +23,7 @@ export default function Nosotros() {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-8 md:mx-auto mt-16 ">
+            <div className="mx-10 xxl:mx-auto mt-16">
                 <div className="flex items-center mb-4">
                     <hr className="flex-grow w-6/12 md:w-9/12 border-[3px] border-black"/>
                     <p className="text-4xl font-bold tracking-wide mx-4">VISION</p>
