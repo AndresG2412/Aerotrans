@@ -1,6 +1,7 @@
 export default function Pedido() {
     return(
         <>
+            {/* racha */}
             <p>Pagina Pedidos</p>
         </>
     )
