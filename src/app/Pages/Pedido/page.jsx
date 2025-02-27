@@ -1,7 +1,7 @@
 export default function Pedido() {
     return(
         <>
-            {/* racha */}
+            {/* racha 2*/}
             <p>Pagina Pedidos</p>
         </>
     )
