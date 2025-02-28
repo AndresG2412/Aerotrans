@@ -1,8 +1,11 @@
 export default function Pedido() {
     return(
         <>
-            {/* racha 2*/}
-            <p>Pagina Pedidos</p>
+            <div className="h-screen pt-24 bg-red-200">
+                <form action="" className="border-2 border-black shadow-2xl md:w-2/4 mx-8 md:mx-auto rounded-lg tracking-wider">
+                    <p className="font-bold text-2xl text-center border-b-black border-1">HAZ TU PEDIDO</p>
+                </form>
+            </div>
         </>
     )
 }
