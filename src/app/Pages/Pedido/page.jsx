@@ -1,7 +1,7 @@
 export default function Pedido() {
     return(
         <>
-            <div className="h-screen pt-24 bg-red-200 flex items-center">
+            <div className="h-screen bg-red-200 flex items-center">
                 <form action="" className="w-screen border-2 border-black shadow-2xl md:w-2/4 mx-8 md:mx-auto rounded-lg tracking-wider">
                     <p className="font-bold text-2xl text-center border-b-black border-1 mt-8">HAZ TU PEDIDO</p>
                     {/* requisitos formulario
@@ -49,6 +49,16 @@ export default function Pedido() {
                         >
                             Telefono
                         </label>
+                    </div>
+
+                    <div className="pb-12">
+                        <p className="hidden md:block text-center pb-4">Llevas equipaje pesado? para una bodega grande?</p>
+                        <p className="block md:hidden text-center">Llevas equipaje pesado?</p>
+                        <p className="block md:hidden text-center pb-4">Para una bodega grande?</p>
+                        <div className="flex justify-center gap-x-10">
+                            <label>Si <input type="radio" name="equipaje" value={"yes"}/></label>
+                            <label>No <input type="radio" name="equipaje" value={"no"}/></label>
+                        </div>
                     </div>
                 </form>
             </div>
