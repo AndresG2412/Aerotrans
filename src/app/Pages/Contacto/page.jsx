@@ -33,7 +33,7 @@ export default function Contacto() {
         </div>
 
             {/* Comentarios */}
-            <div className="mt-12">
+            <div className="mt-12 mb-24">
                 <p className="font-bold text-2xl text-center">CALIFICA TU EXPERIENCIA</p>
                 <div className="mt-4 border-[3px] border-black rounded-2xl md:w-[45rem] h-auto mx-10 md:mx-auto flex flex-col p-6">
                     <div className="max-w-full flex flex-col justify-center gap-6 md:gap-16 mb-6">

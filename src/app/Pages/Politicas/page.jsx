@@ -10,9 +10,9 @@ import descarga from "@/app/Images/descarga.png"
 
 export default function Politicas() {
     return(
-        <>
+        <div className="mb-24">
             <div>
-                    <div className="w-full h-auto bg-gray-600 md:mt-52 md:mb-40 py-20">
+                    <div className="w-full h-auto bg-gray-600 md:mt-40 md:mb-40 py-20">
                         <p className="px-4 text-3xl md:text-4xl text-white text-center font-bold tracking-wider uppercase">Para nosotros brindarte el mejor servicio es lo más</p>
                         <p className="px-8 text-3xl mt-8 md:text-4xl text-white text-center font-bold tracking-wider uppercase">importante, y estas son nuestras políticas mas comunes</p>
 
@@ -66,6 +66,6 @@ export default function Politicas() {
             </div>
 
             <Button titulo={"DESCARGAR"} color={"red"} image={descarga}/>
-        </>
+        </div>
     );
 }

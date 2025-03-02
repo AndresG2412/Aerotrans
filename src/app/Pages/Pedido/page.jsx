@@ -4,7 +4,7 @@ import enviar from "@/app/Images/Contacto/enviar.png"
 export default function Pedido() {
     return(
         <>
-            <div className="h-screen bg-red-200 flex items-center">
+            <div className="h-screen flex items-center">
                 <form action="" className="py-8 w-screen border-2 border-black shadow-2xl md:w-2/4 mx-8 md:mx-auto rounded-lg tracking-wider">
                     <p className="font-bold text-2xl text-center border-b-black border-1">HAZ TU PEDIDO</p>
                     {/* requisitos formulario

@@ -12,8 +12,8 @@ module.exports = {
         foreground: "var(--foreground)",
       },
       screens: {
-        'xxl': '1500px', // a partir de 1500px
-        // ... otras breakpoints
+        'xxl': '1000px',
+        'xxl2': '1500px',
       },
     },
   },
