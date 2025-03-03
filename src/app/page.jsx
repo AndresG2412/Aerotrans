@@ -1,22 +1,23 @@
+"use client"
+
 import Image from "next/image";
 
 import Bienvenida from './Images/Bienvenida.png'
 import servicios from "@/app/Images/Serv-disponibles.png";
 import Slider from "./Components/Slider";
-import Rating from "./Components/Rating";
-import ImageUpload from "./Components/Image";
-import Button from "./Components/Botton";
 
 import s1 from "@/app/Images/Slider1/image.png";
 import s2 from "@/app/Images/Slider1/image2.png";
 import s3 from "@/app/Images/Slider1/image3.png";
-import enviar from "@/app/Images/Contacto/enviar.png"
 
+import { useState } from "react";
 
 const images = [s1, s2, s3] 
 
 
 export default function Home() {
+    const [tab, setTab] = useState(1);
+
 	return (
 		<>
             {/* Bienvenida */}
@@ -45,8 +46,22 @@ export default function Home() {
                 </div>
             </div>
 
+            {/* Tab info */}
+            <div className="text-center my-12">
+                <div className="flex justify-center gap-4">
+                    <button onClick={() => setTab(1)} className="px-4 py-2 bg-blue-500 text-white rounded">Botón 1</button>
+                    <button onClick={() => setTab(2)} className="px-4 py-2 bg-blue-500 text-white rounded">Botón 2</button>
+                    <button onClick={() => setTab(3)} className="px-4 py-2 bg-blue-500 text-white rounded">Botón 3</button>
+                </div>
+                <div className="mt-6 p-4 border border-gray-300 rounded-md">
+                    {tab === 1 && <p>Información 1</p>}
+                    {tab === 2 && <p>Información 2</p>}
+                    {tab === 3 && <p>Información 3</p>}
+                </div>
+            </div>
+
             {/* Sliders */}
-            <div>
+            <div className="mb-24">
                 {/* primer slider */}
                 <div className="md:flex justify-center items-center md:mt-24 mb-12 md:mb-0">
                     <div className="">
