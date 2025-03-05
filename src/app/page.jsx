@@ -49,11 +49,11 @@ export default function Home() {
             {/* Tab info */}
             <div className="text-center my-12">
                 <div className="flex justify-center gap-4">
-                    <button onClick={() => setTab(1)} className="px-4 py-2 bg-blue-500 text-white rounded">Botón 1</button>
-                    <button onClick={() => setTab(2)} className="px-4 py-2 bg-blue-500 text-white rounded">Botón 2</button>
-                    <button onClick={() => setTab(3)} className="px-4 py-2 bg-blue-500 text-white rounded">Botón 3</button>
+                    <button onClick={() => setTab(1)} className="px-4 py-2 bg-blue-600 hover:transition-all hover:scale-110 shadow-[0px_6px_15px_rgba(0,0,0,0.35)] tracking-wider uppercase text-white font-semibold rounded">Taxis</button>
+                    <button onClick={() => setTab(2)} className="px-4 py-2 bg-blue-600 hover:transition-all hover:scale-110 shadow-[0px_6px_15px_rgba(0,0,0,0.35)] tracking-wider uppercase text-white font-semibold rounded">Camionetas</button>
+                    <button onClick={() => setTab(3)} className="px-4 py-2 bg-blue-600 hover:transition-all hover:scale-110 shadow-[0px_6px_15px_rgba(0,0,0,0.35)] tracking-wider uppercase text-white font-semibold rounded">Busetas</button>
                 </div>
-                <div className="mt-6 p-4 border border-gray-300 rounded-md">
+                <div className="mt-6 p-4 border border-gray-600 rounded-md mx-8 md:w-2/3 md:mx-auto">
                     {tab === 1 && <p>Información 1</p>}
                     {tab === 2 && <p>Información 2</p>}
                     {tab === 3 && <p>Información 3</p>}
@@ -61,7 +61,7 @@ export default function Home() {
             </div>
 
             {/* Sliders */}
-            <div className="mb-24">
+            <div className="mb-24 mt-12">
                 {/* primer slider */}
                 <div className="md:flex justify-center items-center md:mt-24 mb-12 md:mb-0">
                     <div className="">
