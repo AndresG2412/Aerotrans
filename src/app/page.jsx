@@ -11,6 +11,7 @@ import s2 from "@/app/Images/Slider1/image2.png";
 import s3 from "@/app/Images/Slider1/image3.png";
 
 import pp from "@/app/Images/ParadasTaxis.png"
+import camioneta from "@/app/Images/Camioneta.png"
 
 import { useState } from "react";
 
@@ -60,9 +61,14 @@ export default function Home() {
                         <Image 
                         src={pp} 
                         alt="servicios" 
-                        className="h-auto w-auto mx-auto mt-6 rounded-lg"
+                        className="md:h-80 h-44 w-auto mx-auto mt-6 rounded-lg"
                     /></p>}
-                    {tab === 2 && <p>Información 2</p>}
+                    {tab === 2 && <p className="mx-8 tracking-wide font-semibold">Con las mejores rutas y servicios, en el terminal de Pitalito!
+                        <Image 
+                        src={camioneta} 
+                        alt="servicios" 
+                        className="md:h-80 h-44 w-auto mx-auto mt-6 rounded-lg"
+                    /></p>}
                     {tab === 3 && <p>Información 3</p>}
                 </div>
             </div>
