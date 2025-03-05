@@ -10,6 +10,8 @@ import s1 from "@/app/Images/Slider1/image.png";
 import s2 from "@/app/Images/Slider1/image2.png";
 import s3 from "@/app/Images/Slider1/image3.png";
 
+import pp from "@/app/Images/ParadasTaxis.png"
+
 import { useState } from "react";
 
 const images = [s1, s2, s3] 
@@ -47,14 +49,19 @@ export default function Home() {
             </div>
 
             {/* Tab info */}
-            <div className="text-center my-12">
+            <div className="text-center md:my-12 mt-6 mb-24">
                 <div className="flex justify-center gap-4">
                     <button onClick={() => setTab(1)} className="px-4 py-2 bg-blue-600 hover:transition-all hover:scale-110 shadow-[0px_6px_15px_rgba(0,0,0,0.35)] tracking-wider uppercase text-white font-semibold rounded">Taxis</button>
                     <button onClick={() => setTab(2)} className="px-4 py-2 bg-blue-600 hover:transition-all hover:scale-110 shadow-[0px_6px_15px_rgba(0,0,0,0.35)] tracking-wider uppercase text-white font-semibold rounded">Camionetas</button>
                     <button onClick={() => setTab(3)} className="px-4 py-2 bg-blue-600 hover:transition-all hover:scale-110 shadow-[0px_6px_15px_rgba(0,0,0,0.35)] tracking-wider uppercase text-white font-semibold rounded">Busetas</button>
                 </div>
                 <div className="mt-6 p-4 border border-gray-600 rounded-md mx-8 md:w-2/3 md:mx-auto">
-                    {tab === 1 && <p>Información 1</p>}
+                    {tab === 1 && <p className="mx-8 tracking-wide font-semibold">Encuentranos siempre en el parque principal y terminal de Pitalito!
+                        <Image 
+                        src={pp} 
+                        alt="servicios" 
+                        className="h-auto w-auto mx-auto mt-6 rounded-lg"
+                    /></p>}
                     {tab === 2 && <p>Información 2</p>}
                     {tab === 3 && <p>Información 3</p>}
                 </div>
