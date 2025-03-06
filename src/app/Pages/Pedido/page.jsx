@@ -1,7 +1,32 @@
+"use client";
+
 import Button from "@/app/Components/Botton"
 import enviar from "@/app/Images/Contacto/enviar.png"
+import Swal from 'sweetalert2'
 
 export default function Pedido() {
+    
+    const Confirmacion = () => {
+        Swal.fire({
+            title: "Deseas ahcer el pedido!?",
+            text: "Si verificaste los datos ingresados, tu carro llegara pronto, continua!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            cancelButtonText: "No, espera!",
+            confirmButtonText: "Si, todo listo!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire({
+                title: "Pedido realizado!",
+                text: "Tu pedido ha sido realizado, te daremos la informacion pronto!",
+                icon: "success"
+              });
+            }
+        });
+    }
+
     return(
         <>
             <div className="h-screen flex items-center">
@@ -64,7 +89,7 @@ export default function Pedido() {
                         </div>
                     </div>
 
-                    <Button titulo={"Enviar"} color={"red"} image={enviar}></Button>
+                    <Button titulo={"Enviar"} color={"green"} image={enviar} onClick={Confirmacion}></Button>
                 </form>
             </div>
         </>
