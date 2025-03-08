@@ -12,6 +12,7 @@ import s3 from "@/app/Images/Slider1/image3.png";
 
 import pp from "@/app/Images/ParadasTaxis.png"
 import camioneta from "@/app/Images/Camioneta.png"
+import buseta from "@/app/Images/image.png"
 
 import { useState } from "react";
 
@@ -71,7 +72,7 @@ export default function Home() {
                     /></p>}
                     {tab === 3 && <p className="mx-8 tracking-wide font-semibold">Llevandote donde mas necesites, brindandote un buen servicio!
                         <Image 
-                        src={camioneta} 
+                        src={buseta} 
                         alt="servicios" 
                         className="md:h-80 h-44 w-auto mx-auto mt-6 rounded-lg"
                     /></p>}
