@@ -69,7 +69,12 @@ export default function Home() {
                         alt="servicios" 
                         className="md:h-80 h-44 w-auto mx-auto mt-6 rounded-lg"
                     /></p>}
-                    {tab === 3 && <p>Información 3</p>}
+                    {tab === 3 && <p className="mx-8 tracking-wide font-semibold">Llevandote donde mas necesites, brindandote un buen servicio!
+                        <Image 
+                        src={camioneta} 
+                        alt="servicios" 
+                        className="md:h-80 h-44 w-auto mx-auto mt-6 rounded-lg"
+                    /></p>}
                 </div>
             </div>
 
