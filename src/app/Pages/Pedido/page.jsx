@@ -5,6 +5,7 @@ import enviar from "@/app/Images/Contacto/enviar.png"
 import Swal from 'sweetalert2'
 
 export default function Pedido() {
+    // arreglar alerta
     
     const Confirmacion = () => {
         Swal.fire({
