@@ -53,9 +53,12 @@ export default function Home() {
             {/* Tab info */}
             <div className="text-center md:my-12 mt-6 mb-24">
                 <div className="flex justify-center gap-4">
-                    <button onClick={() => setTab(1)} className="px-4 py-2 bg-blue-600 hover:transition-all hover:scale-110 shadow-[0px_6px_15px_rgba(0,0,0,0.35)] tracking-wider uppercase text-white font-semibold rounded">Taxis</button>
-                    <button onClick={() => setTab(2)} className="px-4 py-2 bg-blue-600 hover:transition-all hover:scale-110 shadow-[0px_6px_15px_rgba(0,0,0,0.35)] tracking-wider uppercase text-white font-semibold rounded">Camionetas</button>
-                    <button onClick={() => setTab(3)} className="px-4 py-2 bg-blue-600 hover:transition-all hover:scale-110 shadow-[0px_6px_15px_rgba(0,0,0,0.35)] tracking-wider uppercase text-white font-semibold rounded">Busetas</button>
+                    <button onClick={() => setTab(1)} className="group px-4 py-2 hover:bg-blue-800 duration-300 bg-blue-600 hover:transition-all shadow-[0px_6px_15px_rgba(0,0,0,0.35)] tracking-wider uppercase text-white font-semibold rounded">
+                        <p className="group-hover:scale-110 duration-300 hover:transition-all hover:border-b">Taxis</p></button>
+                    <button onClick={() => setTab(2)} className="group px-4 py-2 hover:bg-blue-800 duration-300 bg-blue-600 hover:transition-all shadow-[0px_6px_15px_rgba(0,0,0,0.35)] tracking-wider uppercase text-white font-semibold rounded">
+                        <p className="group-hover:scale-110 duration-300 hover:transition-all hover:border-b">Camionetas</p></button>
+                    <button onClick={() => setTab(3)} className="group px-4 py-2 hover:bg-blue-800 duration-300 bg-blue-600 hover:transition-all shadow-[0px_6px_15px_rgba(0,0,0,0.35)] tracking-wider uppercase text-white font-semibold rounded">
+                        <p className="group-hover:scale-110 duration-300 hover:transition-all hover:border-b">Busetas</p></button>
                 </div>
                 <div className="mt-6 p-4 border border-gray-600 rounded-md mx-8 md:w-2/3 md:mx-auto">
                     {tab === 1 && <p className="mx-8 tracking-wide font-semibold">Encuentranos siempre en el parque principal y terminal de Pitalito!
