@@ -3,7 +3,7 @@ import '@/app/globals.css'
 
 export default function Nosotros() {
     return(
-        <>  
+        <div className="px-4 md:px-12">  
         {/* avanzar ebtno para celular */}
             <Bento/>
 
@@ -38,6 +38,6 @@ export default function Nosotros() {
                 competente, siendo modelos en experiencia y solidez.
                 </div>
             </div>
-        </>
+        </div>
     );
 }

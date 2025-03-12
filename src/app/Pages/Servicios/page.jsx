@@ -6,9 +6,7 @@ import rpt from "@/app/Images/Contacto/report.png"
 
 import Slider from "@/app/Components/Slider";
 import s1 from "@/app/Images/Slider1/r_bus.png";
-import s2 from "@/app/Images/Slider1/image2.png";
-import s3 from "@/app/Images/Slider1/image3.png";
-const images = [s1, s2, s3] 
+const images = [s1] 
 
 export default function Servicios() {
     return(
