@@ -19,28 +19,33 @@ export default function Navbar() {
     return (
         <nav className="bg-white shadow-xl w-[100%] fixed top-0 right-0 z-50">
             <ul className="w-[100%] flex justify-end items-center">
-                <li className="h-[60px] mr-auto">
-                    <Link className="h-[100%] px-[30px] flex items-center" href="/">
+                <li className="h-[60px] mr-auto group">
+                    <Link className="h-[100%] px-[30px] flex items-center group-hover:scale-110 group-hover:transition-transform group-hover:duration-300" href="/">
                         <Image priority={false} className="h-9 w-auto imagenes" src={logo} alt="Logo"/>
                         <Image priority={false} className="h-9 w-auto hidden show-image" src={logosm} alt="Logo"/>
                     </Link>
                 </li>
-                <li className="h-[60px]">
-                    <Link className="h-[100%] px-[20px] hide-on-small flex items-center color-black text-xl font-bold tracking-wider hover:border-[#d4d4d4] hover:duration-[400ms] border-white border-b-4 hover:transition-all" href="../Pages/Pedido">PEDIR TAXI</Link>
+                <li className="h-[60px] group">
+                    <Link className="group-hover:bg-gray-300 group-hover:duration-500 h-[100%] px-[20px] hide-on-small flex items-center color-black text-xl font-bold tracking-wider" href="../Pages/Pedido">
+                    <p className='group-hover:scale-110 group-hover:transition-transform group-hover:duration-300'>PEDIR TAXI</p></Link>
                 </li>
-                <li className="h-[60px]">
-                    <Link className="h-[100%] px-[20px] hide-on-small flex items-center color-black text-xl font-bold tracking-wider hover:border-[#d4d4d4] hover:duration-[400ms] border-white border-b-4 hover:transition-all" href="../Pages/Politicas">POLITICAS</Link>
+                <li className="h-[60px] group">
+                    <Link className="group-hover:bg-gray-300 group-hover:duration-500 h-[100%] px-[20px] hide-on-small flex items-center color-black text-xl font-bold tracking-wider" href="../Pages/Politicas">
+                    <p className='group-hover:scale-110 group-hover:transition-transform group-hover:duration-300'>POLITICAS</p></Link>
                 </li>
-                <li className="h-[60px]">
-                    <Link className="h-[100%] px-[20px] hide-on-small flex items-center color-black text-xl font-bold tracking-wider hover:border-[#d4d4d4] hover:duration-[400ms] border-white border-b-4 hover:transition-all" href="../Pages/Nosotros">NOSOTROS</Link>
+                <li className="h-[60px] group">
+                    <Link className="group-hover:bg-gray-300 group-hover:duration-500 h-[100%] px-[20px] hide-on-small flex items-center color-black text-xl font-bold tracking-wider" href="../Pages/Nosotros">
+                    <p className='group-hover:scale-110 group-hover:transition-transform group-hover:duration-300'>NOSOTROS</p></Link>
                 </li>
-                <li className="h-[60px]">
-                    <Link className="h-[100%] px-[20px] hide-on-small flex items-center color-black text-xl font-bold tracking-wider hover:border-[#d4d4d4] hover:duration-[400ms] border-white border-b-4 hover:transition-all" href="../Pages/Contacto">CONTACTO</Link>
+                <li className="h-[60px] group">
+                    <Link className="group-hover:bg-gray-300 group-hover:duration-500 h-[100%] px-[20px] hide-on-small flex items-center color-black text-xl font-bold tracking-wider" href="../Pages/Contacto">
+                    <p className='group-hover:scale-110 group-hover:transition-transform group-hover:duration-300'>CONTACTO</p></Link>
                 </li>
-                <li className="h-[60px]">
-                    <Link className="h-[100%] px-[20px] hide-on-small flex items-center color-black text-xl font-bold tracking-wider hover:border-[#d4d4d4] hover:duration-[400ms] border-white border-b-4 hover:transition-all" href="../Pages/Servicios">SERVICIOS</Link>
+                <li className="h-[60px] group">
+                    <Link className="group-hover:bg-gray-300 group-hover:duration-500 h-[100%] px-[20px] hide-on-small flex items-center color-black text-xl font-bold tracking-wider" href="../Pages/Servicios">
+                    <p className='group-hover:scale-110 group-hover:transition-transform group-hover:duration-300'>SERVICIOS</p></Link>
                 </li>
-                <li className="h-[60px]">
+                <li className="h-[60px] group">
                     <button onClick={toggleMenu} className="h-[100%] px-[30px] hidden show-burger items-center">
                         <Image priority={false} className="w-7 h-auto" src={menu} alt="Menu"/>
                     </button>
