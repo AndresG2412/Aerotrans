@@ -15,7 +15,7 @@ export default function Footer() {
                     <span className="font-semibold tracking-wide">Mantente conectado con nosotros siempre!</span>
                 </div>
                 <div className="ml-12 hidden lg:block">
-                    <a href="../Admin" className="font-semibold tracking-wide">Entrar como Administrador</a>
+                    <a href="../Pages/Admin" className="font-semibold tracking-wide">Entrar como Administrador</a>
                 </div>
             </div>
 
