@@ -18,8 +18,6 @@ export default function Pedido() {
         }
     });
 
-    const onSubmit1 = (data) => console.log(data);
-
     const onSubmit = (data) => {
         Swal.fire({
             title: "Deseas hacer el pedido!?",
@@ -48,7 +46,7 @@ export default function Pedido() {
                 <p className="font-bold text-2xl text-center border-b-black border-1">HAZ TU PEDIDO</p>
 
                 <div className="relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto">
-                    <input placeholder="" type="text" {...register("Nombre")}
+                    <input placeholder="" type="text" {...register("Nombre", { required: true, maxLength: 30, minLength: 10, pattern: /^[A-Za-z]+$/i })}
                         className="peer h-full w-full rounded-md border border-gray-400 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-red-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     />
                     <label
@@ -59,7 +57,7 @@ export default function Pedido() {
                 </div>
 
                 <div className="relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto">
-                    <input placeholder="" type="text" {...register("Ubicacion")}
+                    <input placeholder="" type="text" {...register("Ubicacion", { required: true, maxLength: 30, minLength: 10})}
                         className="peer h-full w-full rounded-md border border-gray-400 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-red-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     />
                     <label
@@ -70,7 +68,7 @@ export default function Pedido() {
                 </div>
 
                 <div className="relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto">
-                    <input placeholder="" type="text" {...register("Destino")}
+                    <input placeholder="" type="text" {...register("Destino", { required: true, maxLength: 30, minLength: 10})}
                         className="peer h-full w-full rounded-md border border-gray-400 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-red-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     />
                     <label
@@ -81,7 +79,7 @@ export default function Pedido() {
                 </div>
 
                 <div className="relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto">
-                    <input placeholder="" type="number" {...register("Telefono")}
+                    <input placeholder="" type="number" {...register("Telefono", { required: true, maxLength: 10, minLength: 10})}
                         className="peer h-full w-full rounded-md border border-gray-400 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-red-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     />
                     <label
