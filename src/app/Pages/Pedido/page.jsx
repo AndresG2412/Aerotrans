@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 
 export default function Pedido() {
 
-    const { register, handleSubmit } = useForm({
+    const { register, handleSubmit, formState: { errors }, } = useForm({
         defaultValues: {
             Nombre: "",
             Ubicacion: "",
@@ -54,6 +54,9 @@ export default function Pedido() {
                     >
                         Nombre
                     </label>
+                    {errors.Nombre?.type === "required" && (
+                        <p role="alert" className="duration-300 transition-all text-red-600 pb-4">El nombre es requerido!</p>
+                    )}
                 </div>
 
                 <div className="relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto">
@@ -65,6 +68,9 @@ export default function Pedido() {
                     >
                         Ubicacion
                     </label>
+                    {errors.Ubicacion?.type === "required" && (
+                        <p role="alert" className="duration-300 transition-all text-red-600 pb-4">La ubicacion es requerida!</p>
+                    )}
                 </div>
 
                 <div className="relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto">
@@ -76,6 +82,9 @@ export default function Pedido() {
                     >
                         Destino
                     </label>
+                    {errors.Destino?.type === "required" && (
+                        <p role="alert" className="duration-300 transition-all text-red-600 pb-4">La ubicacion destino es requerida!</p>
+                    )}
                 </div>
 
                 <div className="relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto">
@@ -87,6 +96,9 @@ export default function Pedido() {
                     >
                         Telefono
                     </label>
+                    {errors.Telefono?.type === "required" && (
+                        <p role="alert" className="duration-300 transition-all text-red-600 pb-4">Un número de contacto es requerido!</p>
+                    )}
                 </div>
 
                 <div {...register("Equipaje")}>
