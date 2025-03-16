@@ -7,9 +7,10 @@ import Swal from 'sweetalert2'
 export default function Pedido() {
     // arreglar alerta
     
-    const Confirmacion = () => {
+    const Confirmacion = (event) => {
+        event.preventDefault(); // Evita que el formulario se envíe y recargue la página
         Swal.fire({
-            title: "Deseas ahcer el pedido!?",
+            title: "Deseas hacer el pedido!?",
             text: "Si verificaste los datos ingresados, tu carro llegara pronto, continua!",
             icon: "warning",
             showCancelButton: true,
@@ -31,10 +32,8 @@ export default function Pedido() {
     return(
         <>
             <div className="h-screen flex items-center">
-                <form action="" className="py-8 w-screen border-2 border-black shadow-2xl md:w-2/4 mx-8 md:mx-auto rounded-lg tracking-wider">
+                <form onSubmit={Confirmacion} className="py-8 w-screen border-2 border-black shadow-2xl md:w-2/4 mx-8 md:mx-auto rounded-lg tracking-wider">
                     <p className="font-bold text-2xl text-center border-b-black border-1">HAZ TU PEDIDO</p>
-                    {/* requisitos formulario
-                    equipaje Pesado */}
 
                     <div className="relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto">
                         <input placeholder="" type="text"
@@ -90,7 +89,7 @@ export default function Pedido() {
                         </div>
                     </div>
 
-                    <Button titulo={"Enviar"} color={"green"} image={enviar} onClick={Confirmacion}></Button>
+                    <Button titulo={"Enviar"} color={"green"} image={enviar}></Button>
                 </form>
             </div>
         </>
