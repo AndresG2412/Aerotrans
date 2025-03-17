@@ -45,7 +45,7 @@ export default function Pedido() {
             <form onSubmit={handleSubmit(onSubmit)} className="py-8 w-screen border-2 border-black shadow-2xl md:w-2/4 mx-8 md:mx-auto rounded-lg tracking-wider">
                 <p className="font-bold text-2xl text-center border-b-black border-1">HAZ TU PEDIDO</p>
 
-                <div className="relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto">
+                <div className={`relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto ${errors.Nombre ? "mb-16" : ""}`}>
                     <input placeholder="" type="text" autoComplete="off" {...register("Nombre", { required: true, maxLength: 30, minLength: 10})}
                         className="peer h-full w-full rounded-md border border-gray-400 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-red-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     />
@@ -59,7 +59,7 @@ export default function Pedido() {
                     {errors.Nombre?.type === "minLength" && <span className='text-red-500'>El nombre debe ser mayor a 10 caracteres!</span>}
                 </div>
 
-                <div className="relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto">
+                <div className={`relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto ${errors.Ubicacion ? "mb-16" : ""}`}>
                     <input placeholder="" type="text" autoComplete="off" {...register("Ubicacion", { required: true, maxLength: 30, minLength: 10})}
                         className="peer h-full w-full rounded-md border border-gray-400 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-red-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     />
@@ -73,7 +73,7 @@ export default function Pedido() {
                     {errors.Ubicacion?.type === "minLength" && <span className='text-red-500'>La ubicacion debe ser mayor a 10 caracteres!</span>}
                 </div>
 
-                <div className="relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto">
+                <div className={`relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto ${errors.Destino ? "mb-16" : ""}`}>
                     <input placeholder="" type="text" autoComplete="off" {...register("Destino", { required: true, maxLength: 30, minLength: 10})}
                         className="peer h-full w-full rounded-md border border-gray-400 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-red-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     />
@@ -82,12 +82,12 @@ export default function Pedido() {
                     >
                         Destino
                     </label>
-                    {errors.Ubicacion?.type === "required" && <span className='text-red-500'>La ubicacion Destino es requerida!</span>}
-                    {errors.Ubicacion?.type === "maxLength" && <span className='text-red-500'>La ubicacion no debe ser menor a 30 caracteres!</span>}
-                    {errors.Ubicacion?.type === "minLength" && <span className='text-red-500'>La ubicacion debe ser mayor a 10 caracteres!</span>}
+                    {errors.Destino?.type === "required" && <span className='text-red-500'>La ubicacion Destino es requerida!</span>}
+                    {errors.Destino?.type === "maxLength" && <span className='text-red-500'>La ubicacion no debe ser menor a 30 caracteres!</span>}
+                    {errors.Destino?.type === "minLength" && <span className='text-red-500'>La ubicacion debe ser mayor a 10 caracteres!</span>}
                 </div>
 
-                <div className="relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto">
+                <div className={`relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto ${errors.Telefono ? "mb-16" : ""}`}>
                     <input placeholder="" type="number" {...register("Telefono", { required: true, maxLength: 10, minLength: 10})}
                         className="peer h-full w-full rounded-md border border-gray-400 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-red-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     />
