@@ -46,7 +46,7 @@ export default function Pedido() {
                 <p className="font-bold text-2xl text-center border-b-black border-1">HAZ TU PEDIDO</p>
 
                 <div className="relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto">
-                    <input placeholder="" type="text" {...register("Nombre", { required: true, maxLength: 30, minLength: 10, pattern: /^[A-Za-z]+$/i })}
+                    <input placeholder="" type="text" autoComplete="off" {...register("Nombre", { required: true, maxLength: 30, minLength: 10})}
                         className="peer h-full w-full rounded-md border border-gray-400 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-red-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     />
                     <label
@@ -54,13 +54,13 @@ export default function Pedido() {
                     >
                         Nombre
                     </label>
-                    {errors.Nombre?.type === "required" && (
-                        <p role="alert" className="duration-300 transition-all text-red-600 pb-4">El nombre es requerido!</p>
-                    )}
+                    {errors.Nombre?.type === "required" && <span className='text-red-500'>El nombre es requerido!</span>}
+                    {errors.Nombre?.type === "maxLength" && <span className='text-red-500'>El nombre no debe ser menor a 30 caracteres!</span>}
+                    {errors.Nombre?.type === "minLength" && <span className='text-red-500'>El nombre debe ser mayor a 10 caracteres!</span>}
                 </div>
 
                 <div className="relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto">
-                    <input placeholder="" type="text" {...register("Ubicacion", { required: true, maxLength: 30, minLength: 10})}
+                    <input placeholder="" type="text" autoComplete="off" {...register("Ubicacion", { required: true, maxLength: 30, minLength: 10})}
                         className="peer h-full w-full rounded-md border border-gray-400 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-red-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     />
                     <label
@@ -68,13 +68,13 @@ export default function Pedido() {
                     >
                         Ubicacion
                     </label>
-                    {errors.Ubicacion?.type === "required" && (
-                        <p role="alert" className="duration-300 transition-all text-red-600 pb-4">La ubicacion es requerida!</p>
-                    )}
+                    {errors.Ubicacion?.type === "required" && <span className='text-red-500'>La ubicacion donde estas es requerida!</span>}
+                    {errors.Ubicacion?.type === "maxLength" && <span className='text-red-500'>La ubicacion no debe ser menor a 30 caracteres!</span>}
+                    {errors.Ubicacion?.type === "minLength" && <span className='text-red-500'>La ubicacion debe ser mayor a 10 caracteres!</span>}
                 </div>
 
                 <div className="relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto">
-                    <input placeholder="" type="text" {...register("Destino", { required: true, maxLength: 30, minLength: 10})}
+                    <input placeholder="" type="text" autoComplete="off" {...register("Destino", { required: true, maxLength: 30, minLength: 10})}
                         className="peer h-full w-full rounded-md border border-gray-400 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-400 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-red-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                     />
                     <label
@@ -82,9 +82,9 @@ export default function Pedido() {
                     >
                         Destino
                     </label>
-                    {errors.Destino?.type === "required" && (
-                        <p role="alert" className="duration-300 transition-all text-red-600 pb-4">La ubicacion destino es requerida!</p>
-                    )}
+                    {errors.Ubicacion?.type === "required" && <span className='text-red-500'>La ubicacion Destino es requerida!</span>}
+                    {errors.Ubicacion?.type === "maxLength" && <span className='text-red-500'>La ubicacion no debe ser menor a 30 caracteres!</span>}
+                    {errors.Ubicacion?.type === "minLength" && <span className='text-red-500'>La ubicacion debe ser mayor a 10 caracteres!</span>}
                 </div>
 
                 <div className="relative h-11 mx-6 my-8 md:w-3/4 min-w-[200px] md:mx-auto">
@@ -96,9 +96,9 @@ export default function Pedido() {
                     >
                         Telefono
                     </label>
-                    {errors.Telefono?.type === "required" && (
-                        <p role="alert" className="duration-300 transition-all text-red-600 pb-4">Un número de contacto es requerido!</p>
-                    )}
+                    {errors.Telefono?.type === "required" && <span className='text-red-500'>Un número de contacto es requerido!</span>}
+                    {errors.Telefono?.type === "maxLength" && <span className='text-red-500'>El numero de telefono debe tener 10 dijitos!</span>}
+                    {errors.Telefono?.type === "minLength" && <span className='text-red-500'>El numero de telefono debe tener 10 dijitos!</span>}
                 </div>
 
                 <div {...register("Equipaje")}>
