@@ -8,14 +8,14 @@ import Social from "./Social";
 export default function Footer() {
     return (
         <footer
-            className="bg-neutral-100 text-center text-neutral-600 dark:bg-[#121825] dark:text-neutral-200 lg:text-left mt-36">
+            className="bg-neutral-100 text-center text-neutral-600 dark:bg-[#121825] dark:text-neutral-200 lg:text-left">
             <div
                 className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-[#555] lg:justify-between">
                 <div className="mr-12 hidden lg:block">
                     <span className="font-semibold tracking-wide">Mantente conectado con nosotros siempre!</span>
                 </div>
                 <div className="ml-12 hidden lg:block">
-                    <a href="../Admin" className="font-semibold tracking-wide">Entrar como Administrador</a>
+                    <a href="../Pages/Admin" className="font-semibold tracking-wide">Entrar como Administrador</a>
                 </div>
             </div>
 

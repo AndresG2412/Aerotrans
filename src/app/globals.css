@@ -166,6 +166,10 @@
     padding-top: 9rem;
     height: auto;
   }
+
+  .bento-pc{
+    display: grid;
+  }
 }
 
 @media (max-width: 500px) {

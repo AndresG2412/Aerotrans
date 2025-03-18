@@ -6,13 +6,11 @@ import rpt from "@/app/Images/Contacto/report.png"
 
 import Slider from "@/app/Components/Slider";
 import s1 from "@/app/Images/Slider1/r_bus.png";
-import s2 from "@/app/Images/Slider1/image2.png";
-import s3 from "@/app/Images/Slider1/image3.png";
-const images = [s1, s2, s3] 
+const images = [s1] 
 
 export default function Servicios() {
     return(
-        <div className="">
+        <div className="mb-24">
             <div className="relative md:flex justify-center items-center gap-20 h-screen pt-[30%] md:pt-0">
                 <Image src={expo1} alt="expo-1" className="rounded-xl w-3/4 mx-auto md:mx-0 md:w-1/3"/>
                 <div className="md:w-1/3">
