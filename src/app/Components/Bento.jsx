@@ -8,7 +8,7 @@ import img5 from "@/app/Images/Bento/image-5.png"
 
 export default function Bento() {
     return (
-        <div className="xxl:grid grid-cols-5 grid-rows-5 mt-36 gap-4 mx-8 md:mx-48 flex flex-col">
+        <div className="xxl:grid grid-cols-5 grid-rows-5 mt-36 gap-4 mx-8 md:mx-48 hidden">
 
             <div className="w-full bg-gray-100 md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-3  shadow-xl rounded-xl text-center md:flex items-center justify-center">
                 <div className="flex justify-center items-center py-4 px-6 md:block md:py-0 md:px-0 gap-x-4">
