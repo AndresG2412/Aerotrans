@@ -14,7 +14,8 @@ import pp from "@/app/Images/ParadasTaxis.png"
 import camioneta from "@/app/Images/Camioneta.png"
 import buseta from "@/app/Images/image.png"
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { firestore } from "@/libs/db";
 
 const images = [s1, s2, s3] 
 
@@ -22,6 +23,30 @@ const images = [s1, s2, s3]
 export default function Home() {
     const [tab, setTab] = useState(1);
 
+    useEffect(() => {
+        const verificarConexion = async () => {
+            try {
+                // Intenta escribir un documento de prueba
+                await firestore.collection("pruebasConexion").doc("prueba").set({
+                    mensaje: "Conexión exitosa",
+                });
+
+                // Intenta leer el documento de prueba
+                const doc = await firestore.collection("pruebasConexion").doc("prueba").get();
+
+                if (doc.exists) {
+                    console.log("Conexión a Firebase Firestore exitosa!");
+                } else {
+                    console.log("Error: No se encontró el documento de prueba.");
+                }
+            } catch (error) {
+                console.error("Error al verificar la conexión:", error);
+            }
+        };
+
+        verificarConexion();
+    }, []);
+    
 	return (
 		<>
             {/* Bienvenida */}
