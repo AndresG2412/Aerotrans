@@ -20,6 +20,7 @@ export default function Bento() {
                     <div className="flex justify-center items-center gap-x-4 md:gap-x-0 md:pt-6">
                     <Image src={img1} alt="img1" className="w-16 md:w-24 md:mx-2" />
                     <Image src={img2} alt="img2" className="w-11 md:w-16 md:mx-2" />
+                    {/* racha */}
                     </div>
                 </div>
             </div>
