@@ -10,27 +10,12 @@ import s3 from "@/app/Images/Slider1/image3.png";
 import pp from "@/app/Images/ParadasTaxis.png";
 import camioneta from "@/app/Images/Camioneta.png";
 import buseta from "@/app/Images/image.png";
-import { useState, useEffect } from "react";
-import { firestore } from "../libs/db.js";
-import { collection, getDocs } from "firebase/firestore"; // Importa collection y getDocs
+import { useState } from "react";
 
 const images = [s1, s2, s3];
 
 export default function Home() {
   const [tab, setTab] = useState(1);
-
-  useEffect(() => {
-    // Verifica la conexión a Firestore
-    const testCollection = collection(firestore, "test"); // Crea una referencia a la colección "test"
-
-    getDocs(testCollection) // Intenta obtener documentos de la colección
-      .then(() => {
-        console.log("🔥 Conexión a Firebase Firestore exitosa!");
-      })
-      .catch((error) => {
-        console.error("❌ Error al conectar con Firebase Firestore:", error);
-      });
-  }, []);
 
   return (
     <>
