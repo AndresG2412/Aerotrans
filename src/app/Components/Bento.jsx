@@ -1,10 +1,10 @@
-import Image from "next/image";
-import img from "@/app/Images/Bento/image.png"
-import img1 from "@/app/Images/Bento/image-2.png"
-import img2 from "@/app/Images/Bento/image-3.png"
-import img4 from "@/app/Images/Bento/image-4.png"
-import img3 from "@/app/Images/Bento/image-1.png"
-import img5 from "@/app/Images/Bento/image-5.png"
+import Image from "next/image priority={false}";
+import img from "@/app/Images/Bento/image priority={false}.png"
+import img1 from "@/app/Images/Bento/image priority={false}-2.png"
+import img2 from "@/app/Images/Bento/image priority={false}-3.png"
+import img4 from "@/app/Images/Bento/image priority={false}-4.png"
+import img3 from "@/app/Images/Bento/image priority={false}-1.png"
+import img5 from "@/app/Images/Bento/image priority={false}-5.png"
 
 export default function Bento() {
     return (
@@ -18,8 +18,8 @@ export default function Bento() {
                         <p className="font-semibold text-black text-2xl md:text-2xl">cada persona</p>
                     </div>
                     <div className="flex justify-center items-center gap-x-4 md:gap-x-0 md:pt-6">
-                    <Image src={img1} alt="img1" className="w-16 md:w-24 md:mx-2" />
-                    <Image src={img2} alt="img2" className="w-11 md:w-16 md:mx-2" />
+                    <Image priority={false} src={img1} alt="img1" className="w-16 md:w-24 md:mx-2" />
+                    <Image priority={false} src={img2} alt="img2" className="w-11 md:w-16 md:mx-2" />
                     {/* racha */}
                     </div>
                 </div>
@@ -32,7 +32,7 @@ export default function Bento() {
                             <p className="font-semibold text-black text-2xl">Contacta</p>
                             <p className="font-semibold text-black text-2xl">con nosotros</p>
                         </div>
-                        <Image src={img4} alt="img4" className="my-2 md:mx-auto" />
+                        <Image priority={false} src={img4} alt="img4" className="my-2 md:mx-auto" />
                     </div>
                     <p className="font-semibold text-black text-2xl">aerotransltda</p>
                     <p className="font-semibold text-black text-2xl">@hotmail.com</p>
@@ -63,14 +63,14 @@ export default function Bento() {
                         <p className="font-semibold text-black text-2xl">Control de</p>
                         <p className="font-semibold text-black text-2xl">todos los</p>
                         <p className="font-semibold text-black text-2xl">conductores</p> 
-                        <Image src={img5} alt="img1" className="mx-auto mt-5" />
+                        <Image priority={false} src={img5} alt="img1" className="mx-auto mt-5" />
                     </div>
 
                     <div className="my-12">
                         <p className="font-semibold text-black text-2xl">Seguridad</p>
                         <p className="font-semibold text-black text-2xl">en cada</p>
                         <p className="font-semibold text-black text-2xl">servicio</p> 
-                        <Image src={img3} alt="img1" className="mx-auto mt-5" />
+                        <Image priority={false} src={img3} alt="img1" className="mx-auto mt-5" />
                     </div>
                 </div> 
             </div>
@@ -100,7 +100,7 @@ export default function Bento() {
             </div>
 
             <div className="text-center col-start-2 col-end-5 row-start-2 row-end-4 bg-gray-100 shadow-xl rounded-xl flex justify-center items-center">
-                <Image src={img} alt="img1" className="md:mr-20 h-28 md:w-auto" />
+                <Image priority={false} src={img} alt="img1" className="md:mr-20 h-28 md:w-auto" />
                 <div>
                     <p className="font-semibold text-black text-2xl md:text-5xl">ANDRES CAMILO</p>
                     <p className="font-semibold text-black text-2xl md:text-5xl pt-2">GAVIRIA BOLAÑOS</p>

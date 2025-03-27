@@ -38,7 +38,7 @@ export default function Home() {
             <p className="my-1 md:my-4">Necesidad y con seguridad</p>
           </div>
           <Image
-            priority
+            priority={false}
             src={servicios}
             alt="servicios"
             className="mx-auto mt-6 md:mx-0"
@@ -59,21 +59,21 @@ export default function Home() {
         <div className="mt-6 p-4 border border-gray-600 rounded-md mx-8 md:w-2/3 md:mx-auto">
           {tab === 1 && <p className="mx-8 tracking-wide font-semibold">Encuentranos siempre en el parque principal y terminal de Pitalito!
             <Image
-                priority
+                priority={false}
               src={pp}
               alt="servicios"
               className="md:h-80 h-44 w-auto mx-auto mt-6 rounded-lg"
             /></p>}
           {tab === 2 && <p className="mx-8 tracking-wide font-semibold">Con las mejores rutas y servicios, en el terminal de Pitalito!
             <Image
-                priority
+                priority={false}
               src={camioneta}
               alt="servicios"
               className="md:h-80 h-44 w-auto mx-auto mt-6 rounded-lg"
             /></p>}
           {tab === 3 && <p className="mx-8 tracking-wide font-semibold">Llevandote donde mas necesites, brindandote un buen servicio!
             <Image
-                priority
+                priority={false}
               src={buseta}
               alt="servicios"
               className="md:h-80 h-44 w-auto mx-auto mt-6 rounded-lg"

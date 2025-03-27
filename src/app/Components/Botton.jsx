@@ -14,6 +14,7 @@ export default function Button({titulo, color, image}) {
         <>
             <button type="submit" className={`flex w-3/4 gap-4 items-center justify-center text-2xl font-bold border-2 md:border-4 border-black bg-transparent md:w-auto rounded-2xl md:px-6 py-3 mt-6 mx-auto transition-transform duration-300 ease-out transform hover:scale-105 ${hoverClass}`}>
             <Image
+                priority={false}
                 src={image}
                 alt="logo_boton"
                 className="w-8"
