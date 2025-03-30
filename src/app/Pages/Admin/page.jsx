@@ -57,7 +57,7 @@ export default function Admin() {
                     </div>
 
                     <button type="submit" 
-                        className="border-[1.5px] group font-semibold hover:duration-300 hover:bg-sky-400 tracking-widest border-black w-1/3 mx-auto rounded-lg py-1"
+                        className="border-[1.5px] group font-semibold hover:duration-300 hover:bg-red-400 tracking-widest border-black w-1/3 mx-auto rounded-lg py-1"
                         ><p className="group-hover:scale-110 group-hover:duration-300 ">INGRESAR</p>
                     </button>
 
