@@ -8,23 +8,33 @@ import { auth } from "@/libs/db";
 import { useState, useEffect } from "react";
 
 export default function Admin() {
-    const router = useRouter();
-    const [loading, setLoading] = useState(false);
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-    } = useForm({
-        defaultValues: {
-        Correo: "",
-        Contraseña: "",
-        },
+  // Verificar si ya está autenticado
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        router.push("/Pages/Admin/View");
+      }
     });
+
+    return () => unsubscribe();
+  }, [router]);
+
+  const {
+      register,
+      handleSubmit,
+      formState: { errors },
+  } = useForm({
+      defaultValues: {
+      Correo: "",
+      Contraseña: "",
+      },
+  });
 
     const onSubmit = async (data) => {
         setLoading(true);
-        console.log("Intentando iniciar sesión con:", data); // Depuración
         
         try {
         // Verificación adicional de datos antes de enviar
@@ -37,9 +47,7 @@ export default function Admin() {
             data.Correo.trim(), // Añadido trim() para eliminar espacios
             data.Contraseña
         );
-        
-        console.log("Respuesta de Firebase:", userCredential); // Depuración
-        
+                
         Swal.fire({
             title: "INICIO EXITOSO!",
             text: "Acabas de iniciar como administrador!",
@@ -50,7 +58,6 @@ export default function Admin() {
             router.push("/Pages/Admin/View");
         });
         } catch (error) {
-        console.error("Error completo:", error); // Depuración detallada
         
         let errorMessage = "Error al iniciar sesión";
         if (error.code === "auth/invalid-credential") {
@@ -70,7 +77,7 @@ export default function Admin() {
             confirmButtonText: "OK",
         });
         } finally {
-        setLoading(false);
+          setLoading(false);
         }
     };
 
