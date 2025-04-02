@@ -1,10 +1,10 @@
-import Image from "next/image priority={false}";
-import img from "@/app/Images/Bento/image priority={false}.png"
-import img1 from "@/app/Images/Bento/image priority={false}-2.png"
-import img2 from "@/app/Images/Bento/image priority={false}-3.png"
-import img4 from "@/app/Images/Bento/image priority={false}-4.png"
-import img3 from "@/app/Images/Bento/image priority={false}-1.png"
-import img5 from "@/app/Images/Bento/image priority={false}-5.png"
+import Image from "next/image";
+import img from "@/app/Images/Bento/image.png"
+import img1 from "@/app/Images/Bento/image-2.png"
+import img2 from "@/app/Images/Bento/image-3.png"
+import img4 from "@/app/Images/Bento/image-4.png"
+import img3 from "@/app/Images/Bento/image-1.png"
+import img5 from "@/app/Images/Bento/image-5.png"
 
 export default function Bento() {
     return (
