@@ -100,7 +100,7 @@ export default function Admin() {
             <input
               placeholder=""
               type="email"
-              autoComplete="email" // Mejorado para autocompletado
+              autoComplete="off"
               {...register("Correo", { 
                 required: true,
                 pattern: {
