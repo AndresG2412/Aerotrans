@@ -3,8 +3,10 @@
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
+
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/libs/db";
+
 import { useState, useEffect } from "react";
 
 export default function Admin() {
@@ -38,15 +40,15 @@ export default function Admin() {
         
         try {
         // Verificación adicional de datos antes de enviar
-        if (!data.Correo || !data.Contraseña) {
+          if (!data.Correo || !data.Contraseña) {
             throw new Error("Correo y contraseña son requeridos");
-        }
+          }
 
-        const userCredential = await signInWithEmailAndPassword(
-            auth,
-            data.Correo.trim(), // Añadido trim() para eliminar espacios
-            data.Contraseña
-        );
+          const userCredential = await signInWithEmailAndPassword(
+              auth,
+              data.Correo.trim(), // Añadido trim() para eliminar espacios
+              data.Contraseña
+          );
                 
         Swal.fire({
             title: "INICIO EXITOSO!",
