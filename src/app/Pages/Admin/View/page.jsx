@@ -38,28 +38,24 @@ function AdminView() {
     if (!user) {
         return null;
     }
-
-    const cartas = [
-        ["/Pages/Admin/View/Options/Pedidos", "Pedidos", "https://cdn-icons-png.flaticon.com/128/2666/2666436.png"],
-        ["/Pages/Admin/View/Options/Reseñas", "Reseñas", "https://cdn-icons-png.flaticon.com/128/2065/2065224.png"],
-        ["/Pages/Admin/View/Options/Mensajes", "Mensajes", "https://cdn-icons-png.flaticon.com/128/2756/2756321.png"],
-        ["/", "Salir", "https://cdn-icons-png.flaticon.com/128/5565/5565704.png"]
-    ];
-
+    
     return (
         <div className="mt-24 p-4">
             <h1 className="text-3xl font-bold mb-12 uppercase text-center">Bienvenido, Administrador</h1>
 
-            <div className="grid grid-cols-2 gap-10 w-2/4 mx-auto">
-                {cartas.map(([ruta, titulo, imagen], index) => (
-                    <Card
-                        key={index}
-                        ruta={ruta}
-                        titulo={titulo}
-                        imagen={imagen}
-                        onClick={titulo === "Salir" ? handleLogout : null}
-                    />
-                ))}
+            <div className="grid grid-cols-2 gap-4">
+                <button>
+                    <Card ruta={"/Pages/Admin/View/Options/Pedidos"} titulo={"Pedidos"} imagen={"https://cdn-icons-png.flaticon.com/128/2666/2666436.png"}/>
+                </button>
+                <button>
+                <Card ruta={"/Pages/Admin/View/Options/Reseñas"} titulo={"Reseñas"} imagen={"https://cdn-icons-png.flaticon.com/128/2065/2065224.png"}/>
+                </button>
+                <button>
+                <Card ruta={"/Pages/Admin/View/Options/Mensajes"} titulo={"Mensajes"} imagen={"https://cdn-icons-png.flaticon.com/128/2756/2756321.png"}/>
+                </button>
+                <button onClick={handleLogout}>
+                    <Card ruta={"/Pages/Admin"} titulo={"Salir"} imagen={"https://cdn-icons-png.flaticon.com/128/5565/5565704.png"}/>
+                </button>
             </div>
         </div>
     );
