@@ -40,9 +40,9 @@ function AdminView() {
     }
 
     const cartas = [
-        ["/Pedidos", "Pedidos", "https://cdn-icons-png.flaticon.com/128/2666/2666436.png"],
-        ["/Resenas", "Reseñas", "https://cdn-icons-png.flaticon.com/128/2065/2065224.png"],
-        ["/Mensajes", "Mensajes", "https://cdn-icons-png.flaticon.com/128/2756/2756321.png"],
+        ["/Pages/Admin/View/Options/Pedidos", "Pedidos", "https://cdn-icons-png.flaticon.com/128/2666/2666436.png"],
+        ["/Pages/Admin/View/Options/Reseñas", "Reseñas", "https://cdn-icons-png.flaticon.com/128/2065/2065224.png"],
+        ["/Pages/Admin/View/Options/Mensajes", "Mensajes", "https://cdn-icons-png.flaticon.com/128/2756/2756321.png"],
         ["/", "Salir", "https://cdn-icons-png.flaticon.com/128/5565/5565704.png"]
     ];
 
