@@ -1,43 +1,64 @@
 "use client";
 
-import Button from "@/app/Components/Botton"
-import enviar from "@/app/Images/Contacto/enviar.png"
-import Swal from 'sweetalert2'
-
+import Button from "@/app/Components/Botton";
+import enviar from "@/app/Images/Contacto/enviar.png";
+import Swal from 'sweetalert2';
 import { useForm } from "react-hook-form";
+import { collection, doc, setDoc } from "firebase/firestore";
+import { db } from "@/libs/db"; // Asegúrate de que esta ruta sea correcta
 
 export default function Pedido() {
-
     const { register, handleSubmit, formState: { errors }, } = useForm({
         defaultValues: {
             Nombre: "",
             Ubicacion: "",
             Destino: "",
             Telefono: "",
-            Equipaje: "no"
+            Equipaje: "no",
+            Fecha: new Date().toISOString() // Agregamos fecha automática
         }
     });
 
-    const onSubmit = (data) => {
-        Swal.fire({
-            title: "Deseas hacer el pedido!?",
-            text: "Si verificaste los datos ingresados, tu carro llegara pronto, continua!",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            cancelButtonText: "No, espera!",
-            confirmButtonText: "Si, todo listo!"
-        }).then((result) => {
+    const onSubmit = async (data) => {
+        try {
+            const result = await Swal.fire({
+                title: "Deseas hacer el pedido!?",
+                text: "Si verificaste los datos ingresados, tu carro llegara pronto, continua!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                cancelButtonText: "No, espera!",
+                confirmButtonText: "Si, todo listo!"
+            });
+
             if (result.isConfirmed) {
-            console.log(data);
-              Swal.fire({
-                title: "Pedido realizado!",
-                text: "Tu pedido ha sido realizado, te daremos la informacion pronto!",
-                icon: "success"
-              });
+                // Usamos el nombre como ID del documento
+                const pedidoRef = doc(db, "Pedidos", data.Nombre);
+                
+                // Guardamos los datos en Firebase
+                await setDoc(pedidoRef, {
+                    ubicacion: data.Ubicacion,
+                    destino: data.Destino,
+                    telefono: data.Telefono,
+                    equipaje: data.Equipaje,
+                    fecha: new Date().toISOString() // Agregamos fecha de creación
+                });
+
+                Swal.fire({
+                    title: "Pedido realizado!",
+                    text: "Tu pedido ha sido realizado, te daremos la información pronto!",
+                    icon: "success"
+                });
             }
-        });
+        } catch (error) {
+            console.error("Error al guardar el pedido:", error);
+            Swal.fire({
+                title: "Error",
+                text: "Hubo un problema al guardar tu pedido. Por favor intenta nuevamente.",
+                icon: "error"
+            });
+        }
     }
 
     return(
