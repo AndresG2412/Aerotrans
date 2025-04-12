@@ -2,7 +2,7 @@
 
 import withAuth from "@/app/Components/WithAuth";
 import { auth } from "@/libs/db";
-import { useRouter } from "next/navigation"
+import { useRouter } from "next/navigation";
 import Swal from "sweetalert2";
 
 import Card from "@/app/Components/CompoAdmin/Card";
@@ -36,32 +36,29 @@ function AdminView() {
     };
 
     if (!user) {
-        return null; // Seguridad extra
+        return null;
     }
 
     const cartas = [
-        ["/", "Pedidos"],
-        ["/", "Reseñas"],
-        ["/", "Mensajes"],
-        ["/", "Salir"]
+        ["/Pedidos", "Pedidos", "https://cdn-icons-png.flaticon.com/128/2666/2666436.png"],
+        ["/Resenas", "Reseñas", "https://cdn-icons-png.flaticon.com/128/2065/2065224.png"],
+        ["/Mensajes", "Mensajes", "https://cdn-icons-png.flaticon.com/128/2756/2756321.png"],
+        ["/", "Salir", "https://cdn-icons-png.flaticon.com/128/5565/5565704.png"]
     ];
 
     return (
         <div className="mt-24 p-4">
-            <button 
-                onClick={handleLogout}
-                className='fixed bottom-10 right-10 pointer border-1 border-white bg-red-400 py-2 px-4 rounded-lg tracking-wide font-semibold hover:bg-red-600 transition-colors duration-200'
-            >
-                CERRAR SESIÓN
-            </button>
+            <h1 className="text-3xl font-bold mb-12 uppercase text-center">Bienvenido, Administrador</h1>
 
-            <h1 className="text-2xl font-bold mb-2">Panel de Administración</h1>
-            <p className="mb-6">Bienvenido, {user?.email}</p>
-
-            {/* Renderizar cartas */}
             <div className="grid grid-cols-2 gap-10 w-2/4 mx-auto">
-                {cartas.map(([ruta, titulo], index) => (
-                    <Card key={index} ruta={ruta} titulo={titulo} imagen={null} />
+                {cartas.map(([ruta, titulo, imagen], index) => (
+                    <Card
+                        key={index}
+                        ruta={ruta}
+                        titulo={titulo}
+                        imagen={imagen}
+                        onClick={titulo === "Salir" ? handleLogout : null}
+                    />
                 ))}
             </div>
         </div>
