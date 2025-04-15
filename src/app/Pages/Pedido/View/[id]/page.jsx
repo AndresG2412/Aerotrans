@@ -49,6 +49,16 @@ export default function ViewPedido() {
         <p><strong>Equipaje:</strong> {pedido.equipaje}</p>
         <p><strong>Estado:</strong> {pedido.estado}</p>
       </div>
+
+      <button
+        onClick={() => {
+            localStorage.removeItem("pedidoId");  // Elimina el pedido del localStorage
+            router.push("/");  // Redirige a la página principal
+        }}
+        className="mt-6 px-4 py-2 bg-indigo-600 text-white rounded shadow hover:bg-indigo-700"
+        >
+        Volver a la página principal
+        </button>
     </div>
   );
 }
