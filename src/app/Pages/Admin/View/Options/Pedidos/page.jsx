@@ -34,27 +34,21 @@ export default function page() {
     <div className="min-h-screen pt-24 px-6">
       <h1 className="text-2xl font-bold mb-6">Pedidos</h1>
 
-      <div className="grid grid-cols-2 gap-x-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {pedidos.map((pedido) => (
-          <div key={pedido.id} className="border p-4 rounded-lg shadow mb-6 bg-white">
-            {/* Mostrar el nombre en azul */}
-            <h2 className="text-lg font-bold tracking-wider uppercase text-blue-600">
-              {pedido.nombre || "Sin nombre"}
+          <div key={pedido.id} className="border p-4 rounded-lg shadow bg-white">
+            {/* Nombre destacado */}
+            <h2 className="text-lg font-bold tracking-wider uppercase text-indigo-600">
+              {pedido.nombre}
             </h2>
 
-            <ul className="mt-2 mb-4 text-gray-800 text-sm">
-              {/* Mostrar el ID como un campo más */}
+            {/* Información clave para administración */}
+            <ul className="mt-2 mb-4 text-gray-800 text-base  space-y-1">
+              <li><strong>Ubicación:</strong> {pedido.ubicacion}</li>
+              <li><strong>Destino:</strong> {pedido.destino}</li>
+              <li><strong>Teléfono:</strong> {pedido.telefono}</li>
+              <li><strong>Equipaje:</strong> {pedido.equipaje}</li>
               <li><strong>ID:</strong> {pedido.id}</li>
-
-              {Object.entries(pedido).map(([key, value]) => {
-                if (key !== "id" && key !== "nombre") {
-                  return (
-                    <li key={key}>
-                      <strong className='capitalize my-2 text-base'>{key}:</strong> {String(value)}
-                    </li>
-                  );
-                }
-              })}
             </ul>
 
             <div className="flex gap-2">
