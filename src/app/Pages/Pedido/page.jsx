@@ -5,7 +5,7 @@ import enviar from "@/app/Images/Contacto/enviar.png";
 import Swal from 'sweetalert2';
 import { useForm } from "react-hook-form";
 import { collection, doc, setDoc } from "firebase/firestore";
-import { db } from "@/libs/db"; // Asegúrate de que esta ruta sea correcta
+import { db } from "@/libs/db";
 
 export default function Pedido() {
     const { register, handleSubmit, formState: { errors }, } = useForm({
@@ -22,31 +22,33 @@ export default function Pedido() {
     const onSubmit = async (data) => {
         try {
             const result = await Swal.fire({
-                title: "Deseas hacer el pedido!?",
-                text: "Si verificaste los datos ingresados, tu carro llegara pronto, continua!",
+                title: "¿Deseas hacer el pedido?",
+                text: "Si verificaste los datos ingresados, tu carro llegará pronto, ¡continúa!",
                 icon: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#3085d6",
                 cancelButtonColor: "#d33",
                 cancelButtonText: "No, espera!",
-                confirmButtonText: "Si, todo listo!"
+                confirmButtonText: "Sí, todo listo!"
             });
-
+    
             if (result.isConfirmed) {
-                // Usamos el nombre como ID del documento
-                const pedidoRef = doc(db, "Pedidos", data.Nombre);
-                
-                // Guardamos los datos en Firebase
+                const id = Date.now().toString(); // ID único por timestamp
+                const pedidoRef = doc(db, "Pedidos", id);
+    
                 await setDoc(pedidoRef, {
+                    id,
+                    nombre: data.Nombre,
                     ubicacion: data.Ubicacion,
                     destino: data.Destino,
                     telefono: data.Telefono,
                     equipaje: data.Equipaje,
-                    fecha: new Date().toISOString() // Agregamos fecha de creación
+                    fecha: new Date().toISOString(),
+                    estado: "pendiente",
                 });
-
+    
                 Swal.fire({
-                    title: "Pedido realizado!",
+                    title: "¡Pedido realizado!",
                     text: "Tu pedido ha sido realizado, te daremos la información pronto!",
                     icon: "success"
                 });
