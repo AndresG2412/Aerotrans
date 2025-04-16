@@ -40,8 +40,8 @@ export default function LoaderPedido() {
         };
 
         verificarEstado();
-    }, []);
-
+    }, [router]); // ✅ solución: se agregó `router` como dependencia
+    
     if (estado === "pendiente") {
         return (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 z-50 flex items-center justify-center flex-col gap-4 text-white">

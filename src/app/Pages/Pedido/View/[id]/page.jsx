@@ -11,26 +11,29 @@ export default function ViewPedido() {
   const [pedido, setPedido] = useState(null);
 
   useEffect(() => {
+    if (!id) return; // para evitar errores si aún no se ha cargado el id
+  
     const pedidoGuardado = localStorage.getItem("pedidoId");
-
+  
     if (pedidoGuardado !== id) {
       router.push("/Pages/Pedido");
       return;
     }
-
+  
     const obtenerPedido = async () => {
       const docRef = doc(db, "Pedidos", id);
       const docSnap = await getDoc(docRef);
-
+  
       if (docSnap.exists()) {
         setPedido(docSnap.data());
       } else {
         router.push("/Pages/Pedido");
       }
     };
-
+  
     obtenerPedido();
-  }, []);
+  }, [id, router]); // ✅ agregado id y router
+  
 
   if (!pedido) return <p className="text-center mt-10">Cargando pedido...</p>;
 
