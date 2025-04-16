@@ -38,7 +38,7 @@ export default function ViewPedido() {
     <div className="p-6 min-h-screen flex flex-col justify-center items-center text-center">
       <h1 className="text-2xl font-bold mb-4 text-indigo-600">¡Tu vehículo ya viene en camino!</h1>
       <p className="text-lg mb-2">Vehículo asignado con placas:</p>
-      <p className="text-4xl font-bold text-green-600 mb-6">{pedido.placa}</p>
+      <p className="text-4xl font-bold text-green-600 mb-6">{pedido.placaVehiculo}</p>
 
       <div className="bg-white p-4 rounded shadow-md w-full max-w-md">
         <h2 className="text-xl font-semibold mb-3">Resumen del Pedido</h2>
