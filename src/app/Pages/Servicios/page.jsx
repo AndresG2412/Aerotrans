@@ -12,7 +12,7 @@ export default function Servicios() {
     return(
         <div className="mb-24">
             <div className="relative md:flex justify-center items-center gap-20 h-screen pt-[30%] md:pt-0">
-                <Image src={expo1} alt="expo-1" className="rounded-xl w-3/4 mx-auto md:mx-0 md:w-1/3"/>
+                <Image priority={false} src={expo1} alt="expo-1" className="rounded-xl w-3/4 mx-auto md:mx-0 md:w-1/3"/>
                 <div className="md:w-1/3">
                     <p className="font-bold text-blakc tracking-wide text-3xl text-center md:mt-0 mt-6">Servicio de Taxi</p>
                     <Button titulo={"Whatsapp"} color={"green"} image={wpp}></Button>

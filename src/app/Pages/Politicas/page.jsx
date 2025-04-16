@@ -18,32 +18,32 @@ export default function Politicas() {
 
                         <div className="w-max grid grid-cols-2 md:flex mt-20 mx-auto">
 
-                            <div className="text-center md:mx-8 mx-2"><Image src={p1} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
+                            <div className="text-center md:mx-8 mx-2"><Image priority={false} src={p1} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
                                 <p className="font-semibold text-white">Ingerir bebidas</p>
                                 <p className="font-semibold text-white">alcoholicas</p>
                             </div>
 
-                            <div className="text-center md:mx-8 mx-2"><Image src={p2} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
+                            <div className="text-center md:mx-8 mx-2"><Image priority={false} src={p2} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
                                 <p className="font-semibold text-white">El uso de celulares</p>
                                 <p className="font-semibold text-white">mientras se conduce</p>
                             </div>
 
-                            <div className="text-center md:mx-8 mx-2"><Image src={p3} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
+                            <div className="text-center md:mx-8 mx-2"><Image priority={false} src={p3} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
                                 <p className="font-semibold text-white">Uso obligatorio de</p>
                                 <p className="font-semibold text-white">cinturon de seguridad</p>
                             </div>
 
-                            <div className="text-center md:mx-8 mx-2"><Image src={p4} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
+                            <div className="text-center md:mx-8 mx-2"><Image priority={false} src={p4} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
                                 <p className="font-semibold text-white">Descanso de 7 horas</p>
                                 <p className="font-semibold text-white">andtes de cada jornada</p>
                             </div>
 
-                            <div className="text-center md:mx-8 mx-2"><Image src={p5} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
+                            <div className="text-center md:mx-8 mx-2"><Image priority={false} src={p5} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
                                 <p className="font-semibold text-white">Traito igualitario</p>
                                 <p className="font-semibold text-white">para cualquier persona</p>
                             </div>
                             
-                            <div className="text-center md:mx-8 mx-2"><Image src={p6} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
+                            <div className="text-center md:mx-8 mx-2"><Image priority={false} src={p6} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
                                 <p className="font-semibold text-white">Filtros obligatorios</p>
                                 <p className="font-semibold text-white">para iniciar jornada</p>
                             </div>
