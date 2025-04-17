@@ -48,10 +48,10 @@ function AdminView() {
                     <Card ruta={"/Pages/Admin/View/Options/Pedidos"} titulo={"Pedidos"} imagen={"https://cdn-icons-png.flaticon.com/128/2666/2666436.png"}/>
                 </button>
                 <button>
-                <Card ruta={"/Pages/Admin/View/Options/Reseñas"} titulo={"Reseñas"} imagen={"https://cdn-icons-png.flaticon.com/128/2065/2065224.png"}/>
+                    <Card ruta={"/Pages/Admin/View/Options/Opiniones"} titulo={"Reseñas"} imagen={"https://cdn-icons-png.flaticon.com/128/2065/2065224.png"}/>
                 </button>
                 <button>
-                <Card ruta={"/Pages/Admin/View/Options/Mensajes"} titulo={"Mensajes"} imagen={"https://cdn-icons-png.flaticon.com/128/2756/2756321.png"}/>
+                    <Card ruta={"/Pages/Admin/View/Options/Mensajes"} titulo={"Mensajes"} imagen={"https://cdn-icons-png.flaticon.com/128/2756/2756321.png"}/>
                 </button>
                 <button onClick={handleLogout}>
                     <Card ruta={"/Pages/Admin"} titulo={"Salir"} imagen={"https://cdn-icons-png.flaticon.com/128/5565/5565704.png"}/>

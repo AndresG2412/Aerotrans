@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 
 export default function Page() {
     const router = useRouter();
-
+    
     const volver = () => {
         router.push("/Pages/Admin/View");
     }
