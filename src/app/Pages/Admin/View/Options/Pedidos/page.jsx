@@ -9,7 +9,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 
-export default function page() {
+export default function Page() {
   const [pedidos, setPedidos] = useState([]);
   const [placas, setPlacas] = useState({});
 
