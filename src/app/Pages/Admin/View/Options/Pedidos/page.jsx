@@ -8,8 +8,9 @@ import {
   doc,
   updateDoc,
 } from "firebase/firestore";
+import withAuth from "@/app/Components/WithAuth";
 
-export default function Page() {
+function Page() {
   const [pedidos, setPedidos] = useState([]);
   const [placas, setPlacas] = useState({});
 
@@ -138,3 +139,5 @@ export default function Page() {
     </div>
   );
 }
+
+export default withAuth(PedidosPage);

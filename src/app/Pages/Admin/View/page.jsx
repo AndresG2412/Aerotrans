@@ -8,7 +8,6 @@ import Swal from "sweetalert2";
 import Card from "@/app/Components/CompoAdmin/Card";
 
 function AdminView() {
-    const user = auth.currentUser;
     const router = useRouter();
 
     const handleLogout = async () => {
@@ -34,10 +33,6 @@ function AdminView() {
             });
         }
     };
-
-    if (!user) {
-        return null;
-    }
     
     return (
         <div className="mt-24 p-4">
