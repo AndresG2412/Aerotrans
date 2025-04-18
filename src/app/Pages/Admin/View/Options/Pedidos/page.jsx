@@ -140,4 +140,4 @@ function Page() {
   );
 }
 
-export default withAuth(PedidosPage);
+export default withAuth(Page);

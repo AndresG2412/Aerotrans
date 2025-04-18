@@ -13,6 +13,8 @@ export default function Card({ ruta, imagen, titulo }) {
                     height={100}
                     alt="Alt_Imagen"
                     className='rounded-md'
+                    priority={false}
+                    loading="eager"
                 />
 
                 <p className='text-white tracking-wider text-center font-semibold text-2xl'>

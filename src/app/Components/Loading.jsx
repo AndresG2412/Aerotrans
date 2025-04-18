@@ -20,7 +20,7 @@ export default function Loading({
   }, []);
 
   return (
-    <div className={`${fullScreen ? "fixed inset-0" : "w-full h-full"} flex flex-col items-center justify-center bg-white bg-opacity-80 z-50`}>
+    <div className={`${fullScreen ? "absolute inset-0" : "w-full h-full"} flex flex-col items-center justify-center bg-white bg-opacity-80 z-50`}>
       <div className="flex flex-col items-center justify-center space-y-4">
         {/* Spinner */}
         <svg 
