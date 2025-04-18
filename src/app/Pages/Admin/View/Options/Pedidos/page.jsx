@@ -9,10 +9,18 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import withAuth from "@/app/Components/WithAuth";
+import { useRouter } from "next/navigation";
 
 function Page() {
   const [pedidos, setPedidos] = useState([]);
   const [placas, setPlacas] = useState({});
+  
+  const router = useRouter();
+  
+  const volver = () => {
+    router.push("/Pages/Admin/View");
+  };
+
 
   useEffect(() => {
     const unsubscribe = onSnapshot(collection(db, "Pedidos"), (snapshot) => {
@@ -70,6 +78,14 @@ function Page() {
 
   return (
     <div className="min-h-screen py-24 px-6">
+      <button
+        className="border-[1px] border-black bg-red-500 hover:scale-110 hover:duration-300 fixed bottom-5 right-5 py-2 px-4 uppercase tracking-wide font-semibold text-base"
+        onClick={volver}
+      >
+        Volver
+      </button>
+
+
       <h1 className="text-2xl font-bold mb-6 uppercase text-center tracking-wider">Pedidos</h1>
 
       {/* EN ESPERA */}
