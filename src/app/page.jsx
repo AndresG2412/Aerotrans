@@ -11,11 +11,17 @@ import pp from "@/app/Images/ParadasTaxis.png";
 import camioneta from "@/app/Images/Camioneta.png";
 import buseta from "@/app/Images/image.png";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const images = [s1, s2, s3];
 
 export default function Home() {
   const [tab, setTab] = useState(1);
+  const router = useRouter();
+
+  const pedirTaxi = () => {
+    router.push("/Pages/Pedido");
+  }
 
   return (
     <>
@@ -59,11 +65,14 @@ export default function Home() {
         <div className="mt-6 p-4 border border-gray-600 rounded-md mx-8 md:w-2/3 md:mx-auto">
           {tab === 1 && <p className="mx-8 tracking-wide font-semibold">Encuentranos siempre en el parque principal y terminal de Pitalito!
             <Image
-                priority={false}
+              priority={false}
               src={pp}
               alt="servicios"
               className="md:h-80 h-44 w-auto mx-auto mt-6 rounded-lg"
-            /></p>}
+            />
+            <button 
+              onClick={pedirTaxi}
+              className="py-2 px-4 mt-6 border-[1px] border-black bg-red-500 hover:scale-110 hover:duration-300 tracking-wider font-semibold rounded-lg hover:bg-red-600">PEDIR TAXI</button></p>}
           {tab === 2 && <p className="mx-8 tracking-wide font-semibold">Con las mejores rutas y servicios, en el terminal de Pitalito!
             <Image
                 priority={false}
