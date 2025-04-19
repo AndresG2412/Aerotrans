@@ -101,7 +101,7 @@ export default function Pedido() {
     if (esperandoRespuesta) return <LoaderPedido />;
 
     return (
-        <div className="h-screen flex items-center">
+        <div className="h-screen flex items-center mt-24">
         <form onSubmit={handleSubmit(onSubmit)} className="py-8 w-screen border-2 border-black shadow-2xl md:w-2/4 mx-8 md:mx-auto rounded-lg tracking-wider">
             <p className="font-bold text-2xl text-center border-b-black border-1">HAZ TU PEDIDO</p>
 
