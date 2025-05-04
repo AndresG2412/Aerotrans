@@ -13,7 +13,7 @@ export default function Bento() {
             <div className="w-full bg-gray-100 md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-3  shadow-xl rounded-xl text-center md:flex items-center justify-center">
                 <div className="flex justify-center items-center py-4 px-6 md:block md:py-0 md:px-0 gap-x-4">
                     <div className="text-start md:text-center">
-                        <p className="font-semibold text-black text-2xl md:text-2xl">servicios</p>
+                        <p className="font-semibold text-black text-2xl md:text-2xl">Servicios</p>
                         <p className="font-semibold text-black text-2xl md:text-2xl">adecuados para</p>
                         <p className="font-semibold text-black text-2xl md:text-2xl">cada persona</p>
                     </div>

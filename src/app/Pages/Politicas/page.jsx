@@ -35,11 +35,11 @@ export default function Politicas() {
 
                             <div className="text-center md:mx-8 mx-2"><Image priority={false} src={p4} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
                                 <p className="font-semibold text-white">Descanso de 7 horas</p>
-                                <p className="font-semibold text-white">andtes de cada jornada</p>
+                                <p className="font-semibold text-white">antes de cada jornada</p>
                             </div>
 
                             <div className="text-center md:mx-8 mx-2"><Image priority={false} src={p5} alt="politica_n" className="mt-2 md:mt-0 w-24 md:w-28 mx-auto"/>
-                                <p className="font-semibold text-white">Traito igualitario</p>
+                                <p className="font-semibold text-white">Trato igualitario</p>
                                 <p className="font-semibold text-white">para cualquier persona</p>
                             </div>
                             
