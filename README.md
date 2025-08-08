@@ -2,14 +2,9 @@
 
 # Proyecto - [Web AeroTrans 💥](https://aerotrans.vercel.app)
 
-### Creador: 
-Andres Camilo Gaviria Bolaños.
-
-### Dedicado: 
-Empresa Aerotrans LTDA.
-
-### Universidad: 
-Santiago de Cali.
+| Creador          | Dedicado         | Universidad        |
+| :--------------- | :--------------- | :----------------- |
+| `Andres Gaviria` | `Aerotrans LTDA` | `Santiago de Cali` |
 
 ### Tecnologias: 
 - Next.JS para Front-end y logica del mismo, usado por su facilidad de entendimiento, flexibilidad y escalabilidad.
