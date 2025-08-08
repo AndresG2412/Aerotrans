@@ -2,9 +2,9 @@
 
 # Proyecto - [Web AeroTrans 💥](https://aerotrans.vercel.app)
 
-| Creador          | Dedicado         | Universidad        |
-| :--------------- | :--------------- | :----------------- |
-| `Andres Gaviria` | `Aerotrans LTDA` | `Santiago de Cali` |
+| Creador          | Dedicado         | Universidad        | Tec. Front - End | Tec. Back - End   | Tec. DataBase     |
+| :--------------- | :--------------- | :----------------- | :--------------- | :---------------- | :---------------- |
+| `Andres Gaviria` | `Aerotrans LTDA` | `Santiago de Cali` | `Next.JS`        | `Google Firebase` | `Google Firebase` |
 
 ### Tecnologias: 
 - Next.JS para Front-end y logica del mismo, usado por su facilidad de entendimiento, flexibilidad y escalabilidad.
